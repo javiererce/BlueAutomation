@@ -19,7 +19,7 @@ function App() {
   };
 
   const openWhatsApp = () => {
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Blue%20Automation%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20IA%20para%20mi%20hotel.`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=Hola%20Blue%20Automations%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20servicios%20de%20IA.`, '_blank');
   };
 
   return (
@@ -29,7 +29,7 @@ function App() {
         <div className="container mx-auto px-6 h-20 flex items-center justify-between max-w-6xl">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo('hero')}>
             <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-blue-600 text-white flex items-center justify-center font-bold text-xl shadow-[0_0_15px_rgba(0,163,255,0.4)]">B</div>
-            <span className="font-bold text-xl tracking-wide">Blue Automation</span>
+            <span className="font-bold text-xl tracking-wide">Blue Automations</span>
           </div>
 
           {/* Desktop Nav */}
@@ -125,10 +125,10 @@ function App() {
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-blue-600 text-white flex items-center justify-center font-bold text-lg">B</div>
-                <span className="font-bold text-lg">Blue Automation</span>
+                <span className="font-bold text-lg">Blue Automations</span>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
-                Agencia de automatización con IA especializada en el sector hotelero. Transformamos la experiencia de tus huéspedes con tecnología de vanguardia.
+                Agencia especializada en Agentes de IA y sistemas de automatización. Aseguramos que tu negocio esté abierto 24/7 sin intervención humana constante. Let AI handle the routine.
               </p>
             </div>
 
@@ -155,7 +155,7 @@ function App() {
           </div>
 
           <div className="border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-gray-600 text-sm">
-            <p>© {new Date().getFullYear()} Blue Automation. Todos los derechos reservados.</p>
+            <p>© {new Date().getFullYear()} Blue Automations. Todos los derechos reservados.</p>
             <p>Hecho con ❤️ e Inteligencia Artificial</p>
           </div>
         </div>

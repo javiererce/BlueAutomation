@@ -4,23 +4,23 @@ import { CheckCircle, Zap, Shield, Clock } from 'lucide-react';
 const reasons = [
     {
         icon: Zap,
-        title: "Implementación Rápida",
-        description: "En menos de 2 semanas tu hotel tiene agentes IA funcionando y atendiendo huéspedes."
+        title: "Agentes IA 24/7",
+        description: "Configuramos asistentes inteligentes capaces de mantener conversaciones, filtrar consultas y cerrar ventas en cualquier momento."
     },
     {
         icon: Shield,
-        title: "Sin Riesgo",
-        description: "Ofrecemos un periodo de prueba para que veas resultados antes de comprometerte."
+        title: "Automatización Omnicanal",
+        description: "Centralizamos y automatizamos tus respuestas en WhatsApp, Facebook Messenger e Instagram."
     },
     {
         icon: Clock,
-        title: "24/7 Sin Descanso",
-        description: "Tus agentes nunca duermen. Atienden reservas, llamadas y consultas a cualquier hora."
+        title: "Gestión de Citas",
+        description: "Recordatorios automáticos e integración con calendarios y CRM para reducir las ausencias y optimizar agendas."
     },
     {
         icon: CheckCircle,
-        title: "Especialistas en Hotelería",
-        description: "No somos una agencia genérica. Cada solución está diseñada pensando en la operación hotelera."
+        title: "Implementación Rápida",
+        description: "Ofrecemos una implementación rápida con tu sistema funcionando en 48 horas y scripts personalizados."
     }
 ];
 
@@ -35,10 +35,10 @@ export default function WhyUs() {
                         viewport={{ once: true }}
                         className="text-3xl md:text-5xl font-bold mb-4"
                     >
-                        ¿Por qué <span className="text-primary">Blue Automation</span>?
+                        ¿Qué hacemos por tu negocio en <span className="text-primary">Blue Automations</span>?
                     </motion.h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        No solo automatizamos. Transformamos la experiencia completa de tu hotel.
+                        Manejamos toda la infraestructura digital para que puedas aumentar tus ingresos trabajando menos.
                     </p>
                 </div>
 

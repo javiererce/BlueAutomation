@@ -22,18 +22,18 @@ export default function Hero() {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-800 border border-white/10 mb-8 mt-12">
                         <Sparkles className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-medium text-gray-300">Inteligencia Artificial para Hoteles</span>
+                        <span className="text-sm font-medium text-gray-300">Agencia Especializada en Agentes IA & Automatización</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-                        Transforma tu Hotel con <br className="hidden md:block" />
+                        Tu Negocio <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 text-glow">
-                            Agentes Inteligentes
+                            Abierto 24/7 con IA
                         </span>
                     </h1>
 
                     <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                        Automatizamos la atención al huésped, las reservas por WhatsApp, la recepción telefónica y el check-in. Aumenta tus ventas y optimiza la operación de tu posada u hotel 24/7.
+                        Una respuesta tardía es una venta perdida. Automatizamos tus respuestas en WhatsApp, Instagram y Messenger para responder consultas, vender y agendar reservas sin intervención humana constante.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

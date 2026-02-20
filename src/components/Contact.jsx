@@ -40,7 +40,7 @@ export default function Contact() {
         }
 
         // 2. Siempre abrir WhatsApp con los datos (como respaldo y canal principal)
-        const message = `🏨 *Nueva solicitud de Demo - Blue Automation*%0A%0A👤 *Nombre:* ${formData.name}%0A📧 *Email:* ${formData.email}%0A📞 *Teléfono:* ${formData.phone}%0A🏢 *Hotel/Posada:* ${formData.hotelName}%0A💬 *Mensaje:* ${formData.message}`;
+        const message = `🏨 *Nueva solicitud de Demo - Blue Automations*%0A%0A👤 *Nombre:* ${formData.name}%0A📧 *Email:* ${formData.email}%0A📞 *Teléfono:* ${formData.phone}%0A🏢 *Empresa:* ${formData.hotelName}%0A💬 *Mensaje:* ${formData.message}`;
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
 
         // 3. Reset después de 4 segundos
