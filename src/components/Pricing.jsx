@@ -14,7 +14,7 @@ const Pricing = () => {
                 'Gestión de reservas o turnos',
                 'Confirmaciones automáticas',
                 'Recordatorios',
-                '1 idioma incluido',
+                'Múltiples idiomas incluidos',
                 'Hasta volumen estándar'
             ],
             notIncluded: [
@@ -104,8 +104,8 @@ const Pricing = () => {
                             </div>
 
                             <button className={`w-full py-4 rounded-full font-bold transition-all duration-300 ${plan.highlighted
-                                    ? 'btn-glow'
-                                    : 'bg-white/5 hover:bg-white/10 border border-white/10'
+                                ? 'btn-glow'
+                                : 'bg-white/5 hover:bg-white/10 border border-white/10'
                                 }`}>
                                 Comenzar con {plan.name}
                             </button>
