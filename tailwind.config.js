@@ -8,19 +8,26 @@ export default {
         extend: {
             colors: {
                 dark: {
-                    900: '#0B0F19', // Fondo principal
-                    800: '#111827', // Fondo secundario (tarjetas)
-                    700: '#1F2937', // Hover en tarjetas
+                    DEFAULT: '#05070a', // Deep black
+                    950: '#030406',
+                    900: '#05070a',
+                    800: '#0d1117',
+                    700: '#1a1a3a', // Deep space purple/blue
                 },
-                primary: {
-                    DEFAULT: '#00A3FF', // Azul brillante / neón
-                    hover: '#2563EB', // Azul oscuro
+                neon: {
+                    cyan: '#00d0ff',
+                    purple: '#9d00ff',
                 }
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'], // Tipografía moderna técnica y limpia
+                sans: ['Inter', 'sans-serif'],
+            },
+            backgroundImage: {
+                'space-gradient': 'radial-gradient(circle at top, #0d1117 0%, #05070a 100%)',
+                'neon-gradient': 'linear-gradient(135deg, #00d0ff 0%, #9d00ff 100%)',
             }
         },
     },
     plugins: [],
 }
+

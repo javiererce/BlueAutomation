@@ -2,10 +2,10 @@ import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-    { value: 500, suffix: '+', label: 'Consultas Automatizadas/mes' },
-    { value: 24, suffix: '/7', label: 'Atención Ininterrumpida' },
-    { value: 85, suffix: '%', label: 'Reducción en Tiempo de Respuesta' },
-    { value: 3, suffix: 'x', label: 'Más Reservas Directas' },
+    { value: 500, suffix: '+', label: 'Consultas / mes' },
+    { value: 24, suffix: '/7', label: 'Disponibilidad' },
+    { value: 95, suffix: '%', label: 'Precisión IA' },
+    { value: 10, suffix: 'x', label: 'Eficiencia Op.' },
 ];
 
 function AnimatedNumber({ value, suffix }) {
@@ -39,7 +39,7 @@ function AnimatedNumber({ value, suffix }) {
     }, [value]);
 
     return (
-        <span ref={ref} className="text-4xl md:text-5xl font-bold text-primary">
+        <span ref={ref} className="text-5xl md:text-6xl font-bold text-neon-cyan drop-shadow-[0_0_15px_rgba(0,208,255,0.4)]">
             {count}{suffix}
         </span>
     );
@@ -47,20 +47,21 @@ function AnimatedNumber({ value, suffix }) {
 
 export default function Stats() {
     return (
-        <section className="py-20 bg-dark-900 border-y border-white/5">
-            <div className="container mx-auto px-6 max-w-6xl">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <section className="py-20 bg-dark/50 border-y border-white/5 backdrop-blur-sm relative overflow-hidden">
+            <div className="absolute inset-0 bg-neon-gradient opacity-[0.02]" />
+            <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className="text-center"
+                            className="text-center group"
                         >
                             <AnimatedNumber value={stat.value} suffix={stat.suffix} />
-                            <p className="text-gray-400 mt-2 text-sm">{stat.label}</p>
+                            <p className="text-gray-500 mt-4 text-xs font-bold uppercase tracking-[0.2em] group-hover:text-neon-cyan transition-colors">{stat.label}</p>
                         </motion.div>
                     ))}
                 </div>
@@ -68,3 +69,4 @@ export default function Stats() {
         </section>
     );
 }
+
