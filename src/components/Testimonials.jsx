@@ -6,6 +6,7 @@ const testimonials = [
         name: "María González",
         role: "Gerente General",
         hotel: "Hotel Riviera Park",
+        image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
         text: "Desde que implementamos el agente de WhatsApp, nuestras reservas directas aumentaron un 40%. Los huéspedes reciben respuestas instantáneas a cualquier hora y eso marcó la diferencia.",
         stars: 5
     },
@@ -13,6 +14,7 @@ const testimonials = [
         name: "Carlos Menéndez",
         role: "Director de Operaciones",
         hotel: "Posada del Valle",
+        image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
         text: "El concierge virtual RAG es increíble. Los huéspedes escanean el QR en la habitación y obtienen toda la información del hotel al instante. Redujimos las llamadas a recepción en un 60%.",
         stars: 5
     },
@@ -20,6 +22,7 @@ const testimonials = [
         name: "Ana Lucía Torres",
         role: "Propietaria",
         hotel: "Boutique Hotel Sereno",
+        image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200&h=200",
         text: "La automatización de facturas nos ahorra horas de trabajo manual cada semana. El proceso de check-in con OCR es rápido y los huéspedes quedan impresionados con la tecnología.",
         stars: 5
     }
@@ -27,19 +30,21 @@ const testimonials = [
 
 export default function Testimonials() {
     return (
-        <section className="py-24 bg-dark-800/30" id="testimonials">
-            <div className="container mx-auto px-6 max-w-6xl">
+        <section className="py-24 bg-dark relative overflow-hidden" id="testimonials">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-neon-cyan/5 rounded-full blur-[120px] -z-10" />
+
+            <div className="container mx-auto px-6 max-w-6xl relative z-10">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-4"
+                        className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
                     >
-                        Lo que dicen <span className="text-primary">nuestros clientes</span>
+                        Voces Reales, <span className="text-white">IA Real</span>
                     </motion.h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        Hoteles que ya transformaron su operación con inteligencia artificial.
+                    <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
+                        Líderes de la industria que ya experimentan la eficiencia del 2026.
                     </p>
                 </div>
 
@@ -47,27 +52,36 @@ export default function Testimonials() {
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ delay: index * 0.15 }}
-                            className="glass-card p-8 flex flex-col justify-between"
+                            transition={{ delay: index * 0.15, duration: 0.6 }}
+                            className="glass-card p-10 flex flex-col group"
                         >
-                            <div>
-                                <Quote className="w-8 h-8 text-primary/30 mb-4" />
-                                <p className="text-gray-300 leading-relaxed mb-6 italic">
+                            <div className="mb-8">
+                                <Quote className="w-10 h-10 text-neon-cyan/20 mb-6 group-hover:text-neon-cyan/40 transition-colors" />
+                                <p className="text-gray-300 leading-relaxed text-lg font-light italic">
                                     "{testimonial.text}"
                                 </p>
                             </div>
-                            <div>
-                                <div className="flex gap-1 mb-3">
-                                    {Array.from({ length: testimonial.stars }).map((_, i) => (
-                                        <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                                    ))}
+
+                            <div className="mt-auto flex items-center gap-4">
+                                <div className="relative">
+                                    <div className="absolute -inset-1 bg-neon-gradient rounded-full blur opacity-30 group-hover:opacity-60 transition-opacity" />
+                                    <img
+                                        src={testimonial.image}
+                                        alt={testimonial.name}
+                                        className="relative w-14 h-14 rounded-full object-cover border-2 border-dark"
+                                    />
                                 </div>
                                 <div>
-                                    <p className="font-bold text-white">{testimonial.name}</p>
-                                    <p className="text-sm text-gray-500">{testimonial.role} — {testimonial.hotel}</p>
+                                    <div className="flex gap-1 mb-1">
+                                        {Array.from({ length: 5 }).map((_, i) => (
+                                            <Star key={i} className="w-3 h-3 fill-neon-cyan text-neon-cyan drop-shadow-[0_0_5px_rgba(0,208,255,0.5)]" />
+                                        ))}
+                                    </div>
+                                    <p className="font-bold text-white text-base tracking-tight">{testimonial.name}</p>
+                                    <p className="text-xs text-gray-500 uppercase tracking-widest">{testimonial.role} — {testimonial.hotel}</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -77,3 +91,4 @@ export default function Testimonials() {
         </section>
     );
 }
+
