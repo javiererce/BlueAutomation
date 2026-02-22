@@ -27,14 +27,14 @@ export default function Hero() {
                     </div>
 
                     <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
-                        DEJÁ DE PERDER <br className="hidden md:block" />
+                        ATENCIÓN Y VENTAS <br className="hidden md:block" />
                         <span className="text-gradient drop-shadow-[0_0_30px_rgba(0,208,255,0.3)]">
-                            CLIENTES POR LATENCIA
+                            100% AUTÓNOMAS
                         </span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-                        ¿Tu equipo no da abasto con WhatsApp? <span className="text-neon-cyan font-medium">Eliminamos el cuello de botella</span> de tu atención al cliente con agentes de IA que cierran ventas y agendan citas mientras vos te enfocás en escalar.
+                        Desplegamos agentes de IA especializados en <span className="text-white font-medium">atención al cliente, reservas y agendas</span>. Automatización inteligente para canales digitales que convierte cada consulta en una oportunidad real.
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
