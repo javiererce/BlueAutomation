@@ -37,10 +37,10 @@ export default function WhyUs() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
                     >
-                        EL DIFERENCIAL BLUE
+                        TRANSFORMÁ TU OPERACIÓN
                     </motion.h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
-                        No solo vendemos software; desplegamos el futuro operativo de tu compañía.
+                        Resolvemos los cuellos de botella que frenan tu crecimiento. Convertimos tu atención al cliente en una máquina de ventas autónoma que trabaja para vos.
                     </p>
                 </div>
 
