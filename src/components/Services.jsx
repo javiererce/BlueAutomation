@@ -48,10 +48,10 @@ export default function Services() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
                     >
-                        PILA TECNOLÓGICA 2026
+                        IMPULSANDO TUS RESULTADOS
                     </motion.h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
-                        Implementamos la vanguardia en inteligencia artificial para automatizar cada nodo de tu operación.
+                        Maximizá tu capacidad de atención y ventas sin aumentar tus costos operativos. Resolvemos el caos para que vos solo te ocupes de crecer.
                     </p>
                 </div>
 
