@@ -4,23 +4,23 @@ import { CheckCircle, Zap, Shield, Clock, Orbit } from 'lucide-react';
 const reasons = [
     {
         icon: Zap,
-        title: "Cero Latencia, Más Ventas",
-        description: "El cliente que no recibe respuesta en 2 minutos se va a la competencia. Nosotros garantizamos respuesta inmediata, siempre."
+        title: "Atención al Instante",
+        description: "Si no respondés rápido, el cliente se va con la competencia. Nuestra IA garantiza respuestas inmediatas que cierran ventas por vos."
     },
     {
         icon: Shield,
-        title: "Control Total Sin Esfuerzo",
-        description: "Integramos la IA a tu negocio para que todo funcione solo. Menos errores humanos, más claridad en tus procesos operativos."
+        title: "Operación Sin Errores",
+        description: "Eliminamos las fallas humanas y el desorden. Tu negocio funciona con la precisión de un reloj, dándote control total sin esfuerzo."
     },
     {
         icon: Clock,
-        title: "Recuperá tu Tiempo",
-        description: "Sacamos el trabajo pesado de tus manos. Delegá la atención básica a la IA y volvé a ser el estratega de tu propia empresa."
+        title: "Tu Tiempo es Tuyo",
+        description: "Dejá de atender consultas básicas. Delegá lo repetitivo a la IA y enfocalo en las decisiones que realmente hacen crecer tu empresa."
     },
     {
         icon: Orbit,
-        title: "Rentabilidad Máxima",
-        description: "Reducimos tus costos operativos drásticamente mientras aumentamos tu capacidad de respuesta. Eficiencia que se ve en tu balance."
+        title: "Bajá tus Costos",
+        description: "Aumentamos tu capacidad de atención sin que tengas que contratar más personal. Eficiencia real que impacta directo en tu bolsillo."
     }
 ];
 
