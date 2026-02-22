@@ -4,23 +4,23 @@ import { CheckCircle, Zap, Shield, Clock, Orbit } from 'lucide-react';
 const reasons = [
     {
         icon: Zap,
-        title: "Agentes 24/7",
-        description: "Asistentes autónomos que operan mientras descansas, garantizando cero latencia en tus ventas."
+        title: "Cero Latencia, Más Ventas",
+        description: "El cliente que no recibe respuesta en 2 minutos se va a la competencia. Nosotros garantizamos respuesta inmediata, siempre."
     },
     {
         icon: Shield,
-        title: "Omnicanalidad",
-        description: "Sincronización total entre redes sociales, WhatsApp y web en un solo cerebro digital."
+        title: "Control Total Sin Esfuerzo",
+        description: "Integramos la IA a tu negocio para que todo funcione solo. Menos errores humanos, más claridad en tus procesos operativos."
     },
     {
         icon: Clock,
-        title: "Eficiencia Real",
-        description: "Reducción de costos operativos mediante la delegación de tareas cognitivas repetitivas."
+        title: "Recuperá tu Tiempo",
+        description: "Sacamos el trabajo pesado de tus manos. Delegá la atención básica a la IA y volvé a ser el estratega de tu propia empresa."
     },
     {
         icon: Orbit,
-        title: "Escalabilidad",
-        description: "Tu infraestructura crece sin necesidad de aumentar el equipo humano proporcionalmente."
+        title: "Rentabilidad Máxima",
+        description: "Reducimos tus costos operativos drásticamente mientras aumentamos tu capacidad de respuesta. Eficiencia que se ve en tu balance."
     }
 ];
 

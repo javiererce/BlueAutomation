@@ -3,26 +3,26 @@ import { MessageSquare, PhoneCall, FileText, Database, Radio } from 'lucide-reac
 
 const services = [
     {
-        title: "Atención al Cliente y Ventas",
-        description: "Agentes virtuales hiper-personalizados que gestionan reservas y convierten conversaciones en ingresos 24/7.",
+        title: "Captación de Ventas 24/7",
+        description: "Dejá de perder ventas fuera de horario. Nuestra IA responde al instante, califica prospectos y cierra el trato por vos, los 365 días del año.",
         icon: MessageSquare,
         delay: 0.1
     },
     {
-        title: "Recepcionista de Voz Telefónico",
-        description: "Sistemas de voz inteligentes con procesamiento de lenguaje natural que atienden llamadas como un operador experto.",
+        title: "Agenda Siempre Llena",
+        description: "Eliminamos el ida y vuelta infinito para coordinar un turno. La IA autogestiona tu disponibilidad y confirma citas automáticamente en tu calendario.",
         icon: PhoneCall,
         delay: 0.2
     },
     {
-        title: "Automatización de Workflows",
-        description: "Digitalización total de procesos administrativos, desde check-ins OCR hasta gestión automática de facturas.",
+        title: "Liberación de Equipo",
+        description: "Tu personal gasta el 70% de su tiempo en tareas repetitivas. Automatizamos lo operativo para que ellos se enfoquen en vender y dar un servicio premium.",
         icon: FileText,
         delay: 0.3
     },
     {
-        title: "Ecosistema de Datos (RAG)",
-        description: "Conectamos toda tu documentación interna a una IA experta, eliminando la fricción en la búsqueda de información.",
+        title: "Infraestructura de Escala",
+        description: "Crecé sin límites. Atendé a 100 o 10,000 clientes simultáneamente sin contratar más personal ni aumentar tus costos fijos operativos.",
         icon: Database,
         delay: 0.4
     }

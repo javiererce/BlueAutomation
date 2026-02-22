@@ -94,28 +94,28 @@ function App() {
       </button>
 
       {/* ══════════════════════ CTA FINAL ══════════════════════ */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-24 relative overflow-hidden text-center">
         <div className="absolute inset-0 bg-dark/50" />
-        <div className="container mx-auto px-6 max-w-3xl text-center relative z-10">
+        <div className="container mx-auto px-6 max-w-3xl relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
-            ¿Listo para liderar con IA?
+            ¿Listo para automatizar tu éxito?
           </h2>
           <p className="text-gray-400 mb-10 text-lg">
-            Únete a la vanguardia tecnológica y automatiza tu éxito. Agenda una sesión estratégica personalizada hoy mismo.
+            Maximiza tus márgenes y reduce tu carga operativa con infraestructura de IA centralizada y escalable.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <button
               onClick={() => scrollTo('contact')}
               className="w-full sm:w-auto btn-glow"
             >
-              Agendar Sesión Gratis
+              Consultar Implementación
             </button>
             <button
               onClick={openWhatsApp}
               className="w-full sm:w-auto px-10 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-bold transition-all flex items-center justify-center gap-2"
             >
               <MessageCircle className="w-5 h-5 text-neon-cyan" />
-              Consultar por WhatsApp
+              WhatsApp Directo
             </button>
           </div>
         </div>
@@ -131,7 +131,7 @@ function App() {
                 <span className="font-bold text-xl uppercase italic">Blue Automations</span>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed max-w-sm italic">
-                "Pioneering the future of automation. Since 2024, building the infrastructure for the 2026 digital landscape."
+                "Especializados en el desarrollo e implementación de agentes de IA para la automatización de atención al cliente y procesos operativos."
               </p>
             </div>
 
@@ -164,7 +164,7 @@ function App() {
         </div>
       </footer>
     </main>
-  )
+  );
 }
 
-export default App
+export default App;
