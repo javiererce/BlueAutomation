@@ -109,7 +109,7 @@ function App() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <button
-              onClick={() => scrollTo('contact')}
+              onClick={openWhatsApp}
               className="w-full sm:w-auto btn-glow"
             >
               Consultar Implementación
