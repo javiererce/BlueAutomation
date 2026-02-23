@@ -58,7 +58,7 @@ export default function Contact() {
                         Agendá tu Demo
                     </motion.h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
-                        Dejanos tus datos para coordinar una sesión estratégica o escribinos a <span className="text-neon-cyan font-medium">{CONTACT_EMAIL}</span>
+                        Dejanos tus datos para coordinar una sesión estratégica y automatizar tu negocio.
                     </p>
                 </div>
 

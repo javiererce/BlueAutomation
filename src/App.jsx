@@ -107,19 +107,12 @@ function App() {
           <p className="text-gray-400 mb-10 text-lg">
             Maximiza tus márgenes y reduce tu carga operativa con infraestructura de IA centralizada y escalable.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+          <div className="flex justify-center">
             <button
               onClick={openWhatsApp}
               className="w-full sm:w-auto btn-glow"
             >
               Consultar Implementación
-            </button>
-            <button
-              onClick={openWhatsApp}
-              className="w-full sm:w-auto px-10 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-bold transition-all flex items-center justify-center gap-2"
-            >
-              <MessageCircle className="w-5 h-5 text-neon-cyan" />
-              WhatsApp Directo
             </button>
           </div>
         </div>
@@ -155,7 +148,6 @@ function App() {
                 <button onClick={openWhatsApp} className="flex items-center gap-2 text-gray-500 hover:text-neon-cyan transition-colors text-sm">
                   <MessageCircle className="w-4 h-4" /> WhatsApp Direct
                 </button>
-                <p className="text-gray-500 text-sm">info@blueautomation.com</p>
                 <p className="text-gray-500 text-sm">Montevideo, Uruguay</p>
               </div>
             </div>
