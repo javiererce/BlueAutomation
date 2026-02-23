@@ -9,11 +9,11 @@ const faqs = [
     },
     {
         question: "¿Cuánto cuesta el uso de WhatsApp y la IA?",
-        answer: "Nuestros planes tienen un costo mensual fijo más un consumo real por conversación de IA. Esto garantiza que pagues solo por el valor que recibís."
+        answer: "Nuestros planes cubren el desarrollo y mantenimiento del agente. El consumo real de la IA y el costo oficial por mensaje de WhatsApp se abonan aparte. Esto garantiza que pagues solo lo que realmente usas, sin sobrecargos."
     },
     {
         question: "¿Cuánto tarda la implementación?",
-        answer: "El despliegue estándar toma entre 7 y 14 días hábiles, incluyendo la configuración de la lógica y el entrenamiento de tu agente personalizado."
+        answer: "El despliegue estándar es extremadamente rápido: toma entre 4 y 9 días hábiles tener tu agente personalizado operando al 100%."
     },
     {
         question: "¿Necesitamos cambiar nuestro sistema actual?",
