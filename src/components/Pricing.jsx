@@ -37,7 +37,7 @@ const Pricing = () => {
             icon: icons[index],
             highlighted: key === 'plan2' || key === 'optionB',
             badge: key === 'plan2' ? t.pricing.recommended : (key === 'optionB' ? t.pricing.launchCombo : null),
-            priceLabel: key === 'plan1' ? '75' : (key === 'plan2' ? '120' : (key === 'optionA' ? '65' : t.pricing.specialPrice)),
+            priceLabel: key === 'plan1' ? '75' : (key === 'plan2' ? '149' : (key === 'optionA' ? '65' : '119')),
             currency: key.startsWith('option') ? 'USD' : 'USD',
             footerText: isOperational ? t.pricing.realConsumption : t.pricing.oneTime,
             period: isOperational ? t.pricing.perMonth : '',
