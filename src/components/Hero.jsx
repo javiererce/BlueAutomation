@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 export default function Hero() {
+    const { t } = useLanguage();
+
     const scrollTo = (id) => {
         document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -23,18 +26,18 @@ export default function Hero() {
                 >
                     <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass-card mb-8">
                         <Sparkles className="w-4 h-4 text-neon-cyan animate-pulse" />
-                        <span className="text-xs uppercase tracking-widest font-bold text-neon-cyan">Deep Space Automation 2026</span>
+                        <span className="text-xs uppercase tracking-widest font-bold text-neon-cyan">{t.hero.badge}</span>
                     </div>
 
                     <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9]">
-                        ATENCIÓN Y VENTAS <br className="hidden md:block" />
+                        {t.hero.title1} <br className="hidden md:block" />
                         <span className="text-gradient drop-shadow-[0_0_30px_rgba(0,208,255,0.3)]">
-                            100% AUTÓNOMAS
+                            {t.hero.title2}
                         </span>
                     </h1>
 
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
-                        Desplegamos agentes de IA especializados en <span className="text-white font-medium">atención al cliente, reservas y agendas</span>. Automatización inteligente para canales digitales que convierte cada consulta en una oportunidad real.
+                        {t.hero.description}
                     </p>
 
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -43,7 +46,7 @@ export default function Hero() {
                             className="w-full sm:w-auto btn-glow group"
                         >
                             <span className="flex items-center justify-center gap-2">
-                                INICIAR TRANSFORMACIÓN
+                                {t.hero.ctaStart}
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </button>
@@ -51,7 +54,7 @@ export default function Hero() {
                             onClick={() => scrollTo('services')}
                             className="w-full sm:w-auto px-10 py-4 bg-white/5 hover:bg-white/10 text-white rounded-full font-bold border border-white/10 transition-all backdrop-blur-sm"
                         >
-                            SISTEMAS DISPONIBLES
+                            {t.hero.ctaSystems}
                         </button>
                     </div>
                 </motion.div>

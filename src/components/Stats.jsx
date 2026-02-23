@@ -1,12 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
-
-const stats = [
-    { value: 500, suffix: '+', label: 'Consultas / mes' },
-    { value: 24, suffix: '/7', label: 'Disponibilidad' },
-    { value: 95, suffix: '%', label: 'Precisión IA' },
-    { value: 10, suffix: 'x', label: 'Eficiencia Op.' },
-];
+import { useLanguage } from '../LanguageContext';
 
 function AnimatedNumber({ value, suffix }) {
     const [count, setCount] = useState(0);
@@ -46,12 +40,21 @@ function AnimatedNumber({ value, suffix }) {
 }
 
 export default function Stats() {
+    const { t } = useLanguage();
+
+    const statsData = [
+        { value: 500, suffix: '+', label: t.stats.consults },
+        { value: 24, suffix: '/7', label: t.stats.availability },
+        { value: 95, suffix: '%', label: t.stats.precision },
+        { value: 10, suffix: 'x', label: t.stats.efficiency },
+    ];
+
     return (
         <section className="py-20 bg-dark/50 border-y border-white/5 backdrop-blur-sm relative overflow-hidden">
             <div className="absolute inset-0 bg-neon-gradient opacity-[0.02]" />
             <div className="container mx-auto px-6 max-w-6xl relative z-10">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-                    {stats.map((stat, index) => (
+                    {statsData.map((stat, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, scale: 0.9 }}

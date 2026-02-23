@@ -1,30 +1,12 @@
 import { motion } from 'framer-motion';
-import { CheckCircle, Zap, Shield, Clock, Orbit } from 'lucide-react';
-
-const reasons = [
-    {
-        icon: Zap,
-        title: "Ventas Fuera de Horario",
-        description: "Tu negocio no se detiene. Capturá reservas y cerrá ventas mientras descansás, sin perder ni un solo cliente."
-    },
-    {
-        icon: CheckCircle,
-        title: "100% Automatizado",
-        description: "Respondé todas las consultas al instante. Desde dudas frecuentes hasta gestiones complejas de agenda sin intervención manual."
-    },
-    {
-        icon: Shield,
-        title: "Atención 24/7 Real",
-        description: "Soporte ininterrumpido en WhatsApp e Instagram sin necesidad de aumentar tu equipo humano ni tus costos fijos."
-    },
-    {
-        icon: Orbit,
-        title: "Reducción de Carga",
-        description: "Liberá a tu personal de las tareas repetitivas. Automatizá confirmaciones y recordatorios para que ellos se enfoquen en lo importante."
-    }
-];
+import { CheckCircle, Zap, Shield, Orbit } from 'lucide-react';
+import { useLanguage } from '../LanguageContext';
 
 export default function WhyUs() {
+    const { t } = useLanguage();
+
+    const icons = [Zap, CheckCircle, Shield, Orbit];
+
     return (
         <section className="py-24 relative bg-dark overflow-hidden" id="why-us">
             <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-neon-cyan/20 to-transparent" />
@@ -37,16 +19,16 @@ export default function WhyUs() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
                     >
-                        TRANSFORMÁ TU OPERACIÓN
+                        {t.whyUs.title}
                     </motion.h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
-                        Resolvemos los cuellos de botella que frenan tu crecimiento. Convertimos tu atención al cliente en una máquina de ventas autónoma que trabaja para vos.
+                        {t.whyUs.subtitle}
                     </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {reasons.map((reason, index) => {
-                        const Icon = reason.icon;
+                    {t.whyUs.reasons.map((reason, index) => {
+                        const Icon = icons[index];
                         return (
                             <motion.div
                                 key={index}
@@ -60,7 +42,7 @@ export default function WhyUs() {
                                     <Icon className="w-8 h-8 text-neon-cyan" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-3 tracking-tight">{reason.title}</h3>
-                                <p className="text-gray-400 text-sm leading-relaxed font-light">{reason.description}</p>
+                                <p className="text-gray-400 text-sm leading-relaxed font-light">{reason.desc}</p>
                             </motion.div>
                         );
                     })}

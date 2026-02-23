@@ -1,25 +1,12 @@
 import { motion } from 'framer-motion';
 import { MessageSquare, Cpu, CheckCircle } from 'lucide-react';
-
-const steps = [
-    {
-        icon: MessageSquare,
-        title: "El cliente escribe",
-        description: "Tu cliente envía una consulta por WhatsApp, Instagram o Facebook en cualquier momento del día."
-    },
-    {
-        icon: Cpu,
-        title: "El agente resuelve",
-        description: "Tu Agente IA procesa la consulta al instante, responde dudas y gestiona la disponibilidad."
-    },
-    {
-        icon: CheckCircle,
-        title: "Venta confirmada",
-        description: "La reserva, turno o venta queda confirmada y registrada en tus sistemas sin que tengas que hacer nada."
-    }
-];
+import { useLanguage } from '../LanguageContext';
 
 export default function HowItWorks() {
+    const { t } = useLanguage();
+
+    const icons = [MessageSquare, Cpu, CheckCircle];
+
     return (
         <section className="py-24 relative bg-dark" id="how-it-works">
             <div className="container mx-auto px-6 max-w-6xl relative z-10">
@@ -30,10 +17,10 @@ export default function HowItWorks() {
                         viewport={{ once: true }}
                         className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
                     >
-                        ¿Cómo Funciona?
+                        {t.howItWorks.title}
                     </motion.h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
-                        Un proceso inteligente en 3 simples pasos.
+                        {t.howItWorks.description}
                     </p>
                 </div>
 
@@ -41,8 +28,8 @@ export default function HowItWorks() {
                     {/* Línea conectora horizontal para desktop */}
                     <div className="hidden md:block absolute top-[40%] left-[20%] right-[20%] h-px bg-gradient-to-r from-transparent via-neon-cyan/30 to-transparent" />
 
-                    {steps.map((step, index) => {
-                        const Icon = step.icon;
+                    {t.howItWorks.steps.map((step, index) => {
+                        const Icon = icons[index];
                         return (
                             <motion.div
                                 key={index}
@@ -59,7 +46,7 @@ export default function HowItWorks() {
                                     <Icon className="w-10 h-10 text-neon-cyan" />
                                 </div>
                                 <h3 className="text-2xl font-bold mb-4 tracking-tight">{step.title}</h3>
-                                <p className="text-gray-400 font-light leading-relaxed">{step.description}</p>
+                                <p className="text-gray-400 font-light leading-relaxed">{step.desc}</p>
                             </motion.div>
                         );
                     })}
