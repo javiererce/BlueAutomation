@@ -5,8 +5,26 @@ import { motion } from 'framer-motion';
 const Pricing = () => {
     const WHATSAPP_NUMBER = '541168873648';
 
-    const openWhatsApp = (planName) => {
-        const message = `Hola! Me interesa obtener más información sobre el ${planName} de Blue Automations.`;
+    const openWhatsApp = (planTitle) => {
+        let message = '';
+
+        switch (planTitle) {
+            case 'Agente Reservas / Agenda':
+                message = "¡Hola! 👋 Me interesa automatizar mis reservas y agenda con el Plan 1 de Blue Automations. ¿Me cuentan más?";
+                break;
+            case 'Agente Pro Operativo':
+                message = "¡Hola! 🚀 Estoy listo para transformar mi operación con el Plan Agente Pro. ¿Cómo empezamos?";
+                break;
+            case 'Solo Landing Web':
+                message = "¡Hola! 🌐 Me interesa la Landing Web Optimizada (Opción A). ¿Qué información necesitan de mi negocio?";
+                break;
+            case 'Combo Web + Agente':
+                message = "¡Hola! 🔥 ¡Quiero aprovechar el Combo Lanzamiento: Web + Agente! ¿Sigue disponible el precio especial?";
+                break;
+            default:
+                message = `¡Hola! Me interesa obtener más información sobre ${planTitle} de Blue Automations.`;
+        }
+
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
     };
 
