@@ -26,7 +26,7 @@ export default function Hero() {
                         <span className="text-xs uppercase tracking-widest font-bold text-neon-cyan">Deep Space Automation 2026</span>
                     </div>
 
-                    <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]">
+                    <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8 leading-[0.9]">
                         ATENCIÓN Y VENTAS <br className="hidden md:block" />
                         <span className="text-gradient drop-shadow-[0_0_30px_rgba(0,208,255,0.3)]">
                             100% AUTÓNOMAS

@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
-import { Hotel, Utensils, Share2, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
+import hotelImg from '../assets/hotel.png';
+import restaurantImg from '../assets/restaurant.png';
+import businessImg from '../assets/business.png';
 
 const cases = [
     {
         title: "Hoteles",
-        icon: Hotel,
+        image: hotelImg,
         benefits: [
             "Confirmación automática de reservas",
             "Gestión de múltiples habitaciones",
@@ -15,7 +18,7 @@ const cases = [
     },
     {
         title: "Restaurantes",
-        icon: Utensils,
+        image: restaurantImg,
         benefits: [
             "Reserva automática de mesas",
             "Confirmación inmediata vía WhatsApp",
@@ -26,7 +29,7 @@ const cases = [
     },
     {
         title: "Negocios Digitales y Tradicionales",
-        icon: Share2,
+        image: businessImg,
         benefits: [
             "Respuestas instantáneas en redes sociales",
             "Captación automática de clientes",
@@ -57,7 +60,6 @@ export default function UseCases() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {cases.map((useCase, index) => {
-                        const Icon = useCase.icon;
                         return (
                             <motion.div
                                 key={index}
@@ -65,25 +67,31 @@ export default function UseCases() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="glass-card p-10 flex flex-col group overflow-hidden relative"
+                                className="glass-card flex flex-col group overflow-hidden relative border border-white/5"
                             >
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-neon-cyan/5 rounded-full blur-3xl group-hover:bg-neon-cyan/10 transition-colors" />
-
-                                <div className="w-16 h-16 rounded-2xl bg-dark border border-white/5 flex items-center justify-center mb-8 group-hover:border-neon-cyan/50 transition-all duration-500">
-                                    <Icon className="w-8 h-8 text-neon-cyan" />
+                                {/* Imagen de Fondo con Overlay */}
+                                <div className="h-48 overflow-hidden relative">
+                                    <img
+                                        src={useCase.image}
+                                        alt={useCase.title}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent" />
                                 </div>
 
-                                <h3 className="text-2xl font-bold mb-4">{useCase.title}</h3>
-                                <p className="text-gray-400 font-light mb-8">{useCase.description}</p>
+                                <div className="p-8 flex flex-col flex-grow">
+                                    <h3 className="text-2xl font-bold mb-3">{useCase.title}</h3>
+                                    <p className="text-gray-400 font-light mb-6 text-sm">{useCase.description}</p>
 
-                                <ul className="space-y-4 mt-auto">
-                                    {useCase.benefits.map((benefit, i) => (
-                                        <li key={i} className="flex items-start gap-3 text-sm text-gray-300">
-                                            <Check className="w-5 h-5 text-neon-cyan shrink-0 mt-0.5" />
-                                            <span>{benefit}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                                    <ul className="space-y-3 mb-6">
+                                        {useCase.benefits.map((benefit, i) => (
+                                            <li key={i} className="flex items-start gap-3 text-[13px] text-gray-300">
+                                                <Check className="w-4 h-4 text-neon-cyan shrink-0 mt-0.5" />
+                                                <span>{benefit}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </motion.div>
                         );
                     })}
