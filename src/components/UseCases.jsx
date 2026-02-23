@@ -8,6 +8,7 @@ const cases = [
     {
         title: "Hoteles",
         image: hotelImg,
+        alt: "Habitación de hotel moderna con agentes de IA para gestión de reservas",
         benefits: [
             "Confirmación automática de reservas",
             "Gestión de múltiples habitaciones",
@@ -19,6 +20,7 @@ const cases = [
     {
         title: "Restaurantes",
         image: restaurantImg,
+        alt: "Salón de restaurante elegante con sistema de automatización de mesas y WhatsApp",
         benefits: [
             "Reserva automática de mesas",
             "Confirmación inmediata vía WhatsApp",
@@ -30,6 +32,7 @@ const cases = [
     {
         title: "Negocios Digitales y Tradicionales",
         image: businessImg,
+        alt: "Tienda boutique minorista automatizada con agentes de IA para ventas digitales",
         benefits: [
             "Respuestas instantáneas en redes sociales",
             "Captación automática de clientes",
@@ -73,7 +76,7 @@ export default function UseCases() {
                                 <div className="h-48 overflow-hidden relative">
                                     <img
                                         src={useCase.image}
-                                        alt={useCase.title}
+                                        alt={useCase.alt}
                                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/20 to-transparent" />
