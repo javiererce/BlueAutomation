@@ -27,8 +27,24 @@ function App() {
 
   return (
     <main className="min-h-screen bg-dark text-white selection:bg-neon-cyan/30 scroll-smooth">
+      {/* ═══════════════════════════ TOP BAR URGENCIA ═══════════════════════════ */}
+      <div className="bg-neon-gradient py-2 px-6 relative z-[60] overflow-hidden">
+        <div className="container mx-auto text-center flex items-center justify-center gap-4">
+          <span className="text-dark font-black text-[10px] md:text-xs uppercase tracking-[0.2em] flex items-center gap-2">
+            <span className="w-2 h-2 bg-dark rounded-full animate-pulse" />
+            Cupos Limitados para Marzo: Últimos 3 lugares disponibles
+          </span>
+          <button
+            onClick={() => scrollTo('pricing')}
+            className="hidden md:block bg-dark text-white text-[9px] font-bold px-3 py-1 rounded-full uppercase tracking-widest hover:scale-105 transition-transform"
+          >
+            Asegurar mi lugar
+          </button>
+        </div>
+      </div>
+
       {/* ═══════════════════════════ NAVBAR ═══════════════════════════ */}
-      <nav className="fixed top-0 w-full z-50 border-b border-white/5 bg-dark/80 backdrop-blur-xl">
+      <nav className="fixed top-8 md:top-10 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 border border-white/10 bg-dark/80 backdrop-blur-xl rounded-2xl shadow-2xl">
         <div className="container mx-auto px-6 h-20 flex items-center justify-between max-w-6xl">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => scrollTo('hero')}>
             <div className="w-10 h-10 rounded-xl bg-neon-gradient text-dark flex items-center justify-center font-bold text-xl shadow-[0_0_20px_rgba(0,208,255,0.4)]">B</div>
@@ -143,12 +159,15 @@ function App() {
             </div>
 
             <div>
-              <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Connect</h4>
+              <h4 className="font-bold text-white mb-6 uppercase tracking-widest text-xs">Contacto</h4>
               <div className="space-y-4">
-                <button onClick={openWhatsApp} className="flex items-center gap-2 text-gray-500 hover:text-neon-cyan transition-colors text-sm">
-                  <MessageCircle className="w-4 h-4" /> WhatsApp Direct
+                <button onClick={openWhatsApp} className="flex items-center gap-2 text-gray-400 hover:text-neon-cyan transition-colors text-sm">
+                  <MessageCircle className="w-4 h-4" /> WhatsApp Directo
                 </button>
-                <p className="text-gray-500 text-sm">Montevideo, Uruguay</p>
+                <div className="space-y-1">
+                  <p className="text-gray-400 text-sm font-medium">Buenos Aires, Argentina</p>
+                  <p className="text-gray-500 text-[11px] leading-tight">Presencia en Uruguay, Chile, Brasil y Paraguay</p>
+                </div>
               </div>
             </div>
           </div>

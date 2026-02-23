@@ -48,21 +48,35 @@ const Pricing = () => {
             highlighted: true
         },
         {
-            name: 'Complemento',
-            title: 'Landing Web Optimizada',
+            name: 'Opción A',
+            title: 'Solo Landing Web',
             price: '65',
             currency: 'Desde USD',
-            description: 'Infraestructura digital para captar reservas automáticamente.',
+            description: 'Tu base digital optimizada para convertir.',
             features: [
                 'Página profesional en pocos días',
                 'Diseño optimizado para mobile',
                 'Botón WhatsApp estratégico',
-                'Integración directa con el Agente',
-                'Captación automática de consultas',
                 'Galería, Mapa y Servicios'
             ],
             highlighted: false,
-            linkText: 'Consultar por Landing'
+            linkText: 'Solicitar Web'
+        },
+        {
+            name: 'Opción B',
+            title: 'Combo Web + Agente',
+            price: 'Precio Especial',
+            currency: 'Consultar',
+            description: 'La solución definitiva: Web profesional con Agente de IA integrado.',
+            features: [
+                'Todo de la Opción A',
+                'Integración de Agente IA',
+                'Setup completo bonificado',
+                'Sincronización total de consultas',
+                '🚀 Combo Lanzamiento 2026'
+            ],
+            highlighted: true,
+            linkText: 'Aprovechar Combo'
         }
     ];
 
@@ -78,7 +92,7 @@ const Pricing = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                     {plans.map((plan, index) => (
                         <motion.div
                             key={index}
@@ -91,7 +105,7 @@ const Pricing = () => {
                         >
                             {plan.highlighted && (
                                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-neon-cyan text-dark px-4 py-1 rounded-full text-sm font-bold shadow-[0_0_15px_rgba(0,208,255,0.5)]">
-                                    RECOMENDADO
+                                    {plan.name === 'Opción B' ? 'COMBO LANZAMIENTO' : 'RECOMENDADO'}
                                 </div>
                             )}
 
@@ -99,13 +113,13 @@ const Pricing = () => {
                                 <div className="text-neon-cyan font-bold text-sm mb-2 uppercase tracking-widest">{plan.name}</div>
                                 <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
                                 <div className="flex items-baseline gap-1">
-                                    <span className="text-4xl font-bold text-gradient">
-                                        {plan.currency} ${plan.price}
+                                    <span className="text-3xl font-bold text-gradient">
+                                        {plan.currency === 'Consultar' ? 'Precio Especial' : `${plan.currency} $${plan.price}`}
                                     </span>
-                                    <span className="text-gray-400">/mes</span>
+                                    {plan.currency !== 'Consultar' && <span className="text-gray-400">/mes</span>}
                                 </div>
                                 <p className="mt-4 text-gray-500 text-xs italic">
-                                    {plan.name === 'Complemento' ? 'Pago único por implementación' : '+ consumo real de IA'}
+                                    {plan.name.includes('Opción') ? 'Pago único + mantenimiento sugerido' : '+ consumo real de IA'}
                                 </p>
                             </div>
 
