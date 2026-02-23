@@ -10,19 +10,19 @@ const Pricing = () => {
 
         switch (planTitle) {
             case 'Agente Reservas / Agenda':
-                message = "¡Hola! 👋 Me interesa automatizar mis reservas y agenda con el Plan 1 de Blue Automations. ¿Me cuentan más?";
+                message = "¡Hola! 👋 Quiero contratar el Plan 1 (Agente Reservas) de Blue Automations. ¿Qué datos necesitan para empezar?";
                 break;
             case 'Agente Pro Operativo':
-                message = "¡Hola! 🚀 Estoy listo para transformar mi operación con el Plan Agente Pro. ¿Cómo empezamos?";
+                message = "¡Hola! 🚀 Quiero contratar el Plan Agente Pro para escalar mi negocio. ¿Cuáles son los siguientes pasos?";
                 break;
             case 'Solo Landing Web':
-                message = "¡Hola! 🌐 Me interesa la Landing Web Optimizada (Opción A). ¿Qué información necesitan de mi negocio?";
+                message = "¡Hola! 🌐 Quiero contratar la Landing Web Optimizada (Opción A). ¿Cómo iniciamos el diseño?";
                 break;
             case 'Combo Web + Agente':
-                message = "¡Hola! 🔥 ¡Quiero aprovechar el Combo Lanzamiento: Web + Agente! ¿Sigue disponible el precio especial?";
+                message = "¡Hola! 🔥 Quiero aprovechar el Combo Lanzamiento (Web + Agente). ¡Resérvenme el precio especial!";
                 break;
             default:
-                message = `¡Hola! Me interesa obtener más información sobre ${planTitle} de Blue Automations.`;
+                message = `¡Hola! Quiero contratar el servicio de ${planTitle} de Blue Automations.`;
         }
 
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');

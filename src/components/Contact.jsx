@@ -23,18 +23,10 @@ export default function Contact() {
         e.preventDefault();
         setStatus('loading');
 
-        const subject = encodeURIComponent(`Solicitud de Demo - ${formData.hotelName || formData.name}`);
-        const body = encodeURIComponent(
-            `Hola Javier,\n\nMe gustaría agendar una demo.\n\n` +
-            `Nombre: ${formData.name}\n` +
-            `Email: ${formData.email}\n` +
-            `Teléfono: ${formData.phone}\n` +
-            `Empresa/Hotel: ${formData.hotelName}\n\n` +
-            `Mensaje: ${formData.message}`
-        );
+        const message = `🚀 *Nueva solicitud de Demo - Blue Automations*%0A%0A👤 *Nombre:* ${formData.name}%0A📧 *Email:* ${formData.email}%0A📞 *Teléfono:* ${formData.phone}%0A🏢 *Empresa:* ${formData.hotelName}%0A💬 *Mensaje:* ${formData.message}`;
 
-        // Abrir cliente de correo
-        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+        // Abrir WhatsApp con los datos
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
 
         setStatus('success');
         setTimeout(() => {
@@ -75,8 +67,8 @@ export default function Contact() {
                             className="text-center py-12"
                         >
                             <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
-                            <h3 className="text-2xl font-bold mb-2">¡Solicitud Iniciada!</h3>
-                            <p className="text-gray-400">Se ha abierto tu cliente de correo para enviar la solicitud a {CONTACT_EMAIL}.</p>
+                            <h3 className="text-2xl font-bold mb-2">¡Solicitud Enviada!</h3>
+                            <p className="text-gray-400">Te redirigimos a WhatsApp para confirmar los detalles de tu demo. ¡Nos vemos ahí!</p>
                         </motion.div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -119,7 +111,7 @@ export default function Contact() {
                                 {status === 'loading' ? (
                                     <><Loader2 className="w-5 h-5 animate-spin" /> Procesando...</>
                                 ) : (
-                                    <><Send className="w-5 h-5" /> Enviar y Agendar por Email</>
+                                    <><Send className="w-5 h-5" /> Enviar y Agendar por WhatsApp</>
                                 )}
                             </button>
                         </form>
