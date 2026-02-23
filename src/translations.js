@@ -232,25 +232,20 @@ export const translations = {
             title: "Industry Solutions",
             subtitle: "We design specialized agents that understand the specific challenges of your sector.",
             cards: {
-                posada: {
-                    title: "Inns & Hotels",
+                hotels: {
+                    title: "Hotels & Inns",
                     desc: "Intelligent guest management and direct bookings.",
                     benefits: ["Automatic digital check-in", "24/7 inquiry response", "Availability management", "PMS synchronization"]
                 },
-                restaurante: {
+                restaurants: {
                     title: "Restaurants",
                     desc: "Keep your dining room full and staff focused on service.",
                     benefits: ["Automatic table bookings", "WhatsApp confirmation", "Interactive digital menu", "Attendance reminders"]
                 },
-                ecommerce: {
-                    title: "E-commerce",
-                    desc: "Convert inquiries into sales without human intervention.",
-                    benefits: ["Order tracking", "AI After-sales support", "Product recommendation", "Automated FAQs"]
-                },
-                fisico: {
-                    title: "Physical Businesses",
-                    desc: "The digital extension of your local store that never closes.",
-                    benefits: ["Appointment coordination", "Location and hours", "Service catalog", "Lead generation"]
+                digital: {
+                    title: "E-commerce & Business",
+                    desc: "The digital extension of your store that never closes.",
+                    benefits: ["Order tracking", "Appointment coordination", "Location and hours", "Lead generation"]
                 }
             }
         },
