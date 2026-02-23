@@ -8,6 +8,7 @@ import Contact from './components/Contact'
 import Pricing from './components/Pricing'
 import UseCases from './components/UseCases'
 import FAQ from './components/FAQ'
+import TechMarquee from './components/TechMarquee'
 import { MessageCircle, Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 import { useLanguage } from './LanguageContext'
@@ -191,6 +192,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* ══════════════════════ TECH MARQUEE ══════════════════════ */}
+      <TechMarquee />
 
       {/* ══════════════════════ FOOTER ══════════════════════ */}
       <footer className="border-t border-white/5 bg-dark/80 py-16 backdrop-blur-md">
