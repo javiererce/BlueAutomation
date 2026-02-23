@@ -25,7 +25,7 @@ const cases = [
         description: "Mantené tu salón lleno sin distraer a tu personal de la cocina."
     },
     {
-        title: "Negocios Digitales",
+        title: "Negocios Digitales y Tradicionales",
         icon: Share2,
         benefits: [
             "Respuestas instantáneas en redes sociales",
@@ -33,7 +33,7 @@ const cases = [
             "Derivación inteligente a humanos",
             "Sincronización con catálogos"
         ],
-        description: "Convertí tus seguidores en clientes reales de forma automática."
+        description: "Convertí tus seguidores y visitantes en clientes reales de forma automática."
     }
 ];
 

@@ -8,6 +8,7 @@ const Pricing = () => {
             name: 'Plan 1',
             title: 'Agente Reservas / Agenda',
             price: '75',
+            currency: 'USD',
             description: 'Gestión inteligente de disponibilidad y citas.',
             features: [
                 'Atención automática 24/7',
@@ -28,6 +29,7 @@ const Pricing = () => {
             name: 'Plan 2',
             title: 'Agente Pro Operativo',
             price: '120',
+            currency: 'USD',
             description: 'Automatización total para escalar tu operación.',
             features: [
                 'Todo lo anterior',
@@ -37,6 +39,23 @@ const Pricing = () => {
                 'Lógica personalizada avanzada'
             ],
             highlighted: true
+        },
+        {
+            name: 'Complemento',
+            title: 'Landing Web Optimizada',
+            price: 'Consultar',
+            currency: '',
+            description: 'Infraestructura digital para captar reservas automáticamente.',
+            features: [
+                'Página profesional en pocos días',
+                'Diseño optimizado para mobile',
+                'Botón WhatsApp estratégico',
+                'Integración directa con el Agente',
+                'Captación automática de consultas',
+                'Galería, Mapa y Servicios'
+            ],
+            highlighted: false,
+            linkText: 'Consultar por Landing'
         }
     ];
 
@@ -52,7 +71,7 @@ const Pricing = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                     {plans.map((plan, index) => (
                         <motion.div
                             key={index}
@@ -74,11 +93,13 @@ const Pricing = () => {
                                 <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-4xl font-bold text-gradient">
-                                        ${plan.price}
+                                        {plan.price === 'Consultar' ? 'Consultar' : `${plan.currency} $${plan.price}`}
                                     </span>
-                                    <span className="text-gray-400">/mes</span>
+                                    {plan.price !== 'Consultar' && <span className="text-gray-400">/mes</span>}
                                 </div>
-                                <p className="mt-4 text-gray-500 text-xs italic">+ consumo real de IA</p>
+                                <p className="mt-4 text-gray-500 text-xs italic">
+                                    {plan.price === 'Consultar' ? 'Implementación rápida y profesional' : '+ consumo real de IA'}
+                                </p>
                             </div>
 
                             <div className="space-y-6 mb-8 flex-grow">
@@ -107,7 +128,7 @@ const Pricing = () => {
                                 ? 'btn-glow'
                                 : 'bg-white/5 hover:bg-white/10 border border-white/10'
                                 }`}>
-                                Comenzar con {plan.name}
+                                {plan.linkText || `Comenzar con ${plan.name}`}
                             </button>
                         </motion.div>
                     ))}
