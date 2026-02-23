@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, User, Mail, Phone, Building2, MessageSquare, CheckCircle, Loader2 } from 'lucide-react';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/leads';
+const CONTACT_EMAIL = 'javiererce@gmail.com';
 const WHATSAPP_NUMBER = '541168873648';
 
 export default function Contact() {
@@ -13,59 +13,52 @@ export default function Contact() {
         hotelName: '',
         message: ''
     });
-    const [status, setStatus] = useState('idle'); // idle | loading | success | error
+    const [status, setStatus] = useState('idle');
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         setStatus('loading');
 
-        // 1. Intentar guardar en el backend
-        try {
-            const response = await fetch(API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            });
+        const subject = encodeURIComponent(`Solicitud de Demo - ${formData.hotelName || formData.name}`);
+        const body = encodeURIComponent(
+            `Hola Javier,\n\nMe gustaría agendar una demo.\n\n` +
+            `Nombre: ${formData.name}\n` +
+            `Email: ${formData.email}\n` +
+            `Teléfono: ${formData.phone}\n` +
+            `Empresa/Hotel: ${formData.hotelName}\n\n` +
+            `Mensaje: ${formData.message}`
+        );
 
-            if (!response.ok) throw new Error('Error en el servidor');
+        // Abrir cliente de correo
+        window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 
-            setStatus('success');
-        } catch (error) {
-            console.warn('Backend no disponible, redirigiendo a WhatsApp:', error);
-            setStatus('success');
-        }
-
-        // 2. Siempre abrir WhatsApp con los datos (como respaldo y canal principal)
-        const message = `🏨 *Nueva solicitud de Demo - Blue Automations*%0A%0A👤 *Nombre:* ${formData.name}%0A📧 *Email:* ${formData.email}%0A📞 *Teléfono:* ${formData.phone}%0A🏢 *Empresa:* ${formData.hotelName}%0A💬 *Mensaje:* ${formData.message}`;
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
-
-        // 3. Reset después de 4 segundos
+        setStatus('success');
         setTimeout(() => {
             setStatus('idle');
             setFormData({ name: '', email: '', phone: '', hotelName: '', message: '' });
-        }, 4000);
+        }, 3000);
     };
 
-    const inputClass = "w-full pl-12 pr-4 py-4 bg-dark-900 border border-white/10 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all";
+    const inputClass = "w-full pl-12 pr-4 py-4 bg-dark-900 border border-white/10 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/30 transition-all";
 
     return (
-        <section className="py-24 relative bg-dark-800/30" id="contact">
+        <section className="py-24 relative bg-dark-900/50" id="contact">
             <div className="container mx-auto px-6 max-w-4xl">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-4"
+                        className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
                     >
-                        Agenda tu <span className="text-primary">Demo Gratuita</span>
+                        Agendá tu Demo
                     </motion.h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        Déjanos tus datos y te mostraremos cómo la IA puede transformar la operación de tu hotel.
+                    <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
+                        Dejanos tus datos para coordinar una sesión estratégica o escribinos a <span className="text-neon-cyan font-medium">{CONTACT_EMAIL}</span>
                     </p>
                 </div>
 
@@ -82,8 +75,8 @@ export default function Contact() {
                             className="text-center py-12"
                         >
                             <CheckCircle className="w-20 h-20 text-green-400 mx-auto mb-6" />
-                            <h3 className="text-2xl font-bold mb-2">¡Datos Recibidos!</h3>
-                            <p className="text-gray-400">Te redirigimos a WhatsApp para confirmar tu demo. ¡Hablamos pronto!</p>
+                            <h3 className="text-2xl font-bold mb-2">¡Solicitud Iniciada!</h3>
+                            <p className="text-gray-400">Se ha abierto tu cliente de correo para enviar la solicitud a {CONTACT_EMAIL}.</p>
                         </motion.div>
                     ) : (
                         <form onSubmit={handleSubmit} className="space-y-6">
@@ -105,28 +98,28 @@ export default function Contact() {
 
                                 <div className="relative">
                                     <Building2 className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
-                                    <input type="text" name="hotelName" placeholder="Nombre de tu hotel o posada" value={formData.hotelName} onChange={handleChange} className={inputClass} />
+                                    <input type="text" name="hotelName" placeholder="Nombre de tu negocio" value={formData.hotelName} onChange={handleChange} className={inputClass} />
                                 </div>
                             </div>
 
                             <textarea
                                 name="message"
-                                placeholder="Cuéntanos sobre tu hotel y qué te gustaría automatizar..."
+                                placeholder="¿Qué te gustaría automatizar en tu operación?"
                                 value={formData.message}
                                 onChange={handleChange}
                                 rows={4}
-                                className="w-full px-4 py-4 bg-dark-900 border border-white/10 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all resize-none"
+                                className="w-full px-4 py-4 bg-dark-900 border border-white/10 rounded-xl text-white placeholder:text-gray-500 focus:outline-none focus:border-neon-cyan/50 focus:ring-1 focus:ring-neon-cyan/30 transition-all resize-none font-light"
                             />
 
                             <button
                                 type="submit"
                                 disabled={status === 'loading'}
-                                className="w-full px-8 py-4 bg-primary hover:bg-primary-hover text-white rounded-xl font-semibold transition-all shadow-[0_0_20px_rgba(0,163,255,0.3)] hover:shadow-[0_0_30px_rgba(0,163,255,0.5)] flex items-center justify-center gap-2 group text-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                                className="w-full py-4 btn-glow flex items-center justify-center gap-3 text-lg disabled:opacity-50"
                             >
                                 {status === 'loading' ? (
-                                    <><Loader2 className="w-5 h-5 animate-spin" /> Enviando...</>
+                                    <><Loader2 className="w-5 h-5 animate-spin" /> Procesando...</>
                                 ) : (
-                                    <><Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> Enviar y Agendar Demo</>
+                                    <><Send className="w-5 h-5" /> Enviar y Agendar por Email</>
                                 )}
                             </button>
                         </form>

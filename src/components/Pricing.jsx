@@ -3,6 +3,13 @@ import { Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Pricing = () => {
+    const WHATSAPP_NUMBER = '541168873648';
+
+    const openWhatsApp = (planName) => {
+        const message = `Hola! Me interesa obtener más información sobre el ${planName} de Blue Automations.`;
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+    };
+
     const plans = [
         {
             name: 'Plan 1',
@@ -43,8 +50,8 @@ const Pricing = () => {
         {
             name: 'Complemento',
             title: 'Landing Web Optimizada',
-            price: 'Consultar',
-            currency: '',
+            price: '65',
+            currency: 'Desde USD',
             description: 'Infraestructura digital para captar reservas automáticamente.',
             features: [
                 'Página profesional en pocos días',
@@ -93,12 +100,12 @@ const Pricing = () => {
                                 <h3 className="text-2xl font-bold mb-2">{plan.title}</h3>
                                 <div className="flex items-baseline gap-1">
                                     <span className="text-4xl font-bold text-gradient">
-                                        {plan.price === 'Consultar' ? 'Consultar' : `${plan.currency} $${plan.price}`}
+                                        {plan.currency} ${plan.price}
                                     </span>
-                                    {plan.price !== 'Consultar' && <span className="text-gray-400">/mes</span>}
+                                    <span className="text-gray-400">/mes</span>
                                 </div>
                                 <p className="mt-4 text-gray-500 text-xs italic">
-                                    {plan.price === 'Consultar' ? 'Implementación rápida y profesional' : '+ consumo real de IA'}
+                                    {plan.name === 'Complemento' ? 'Pago único por implementación' : '+ consumo real de IA'}
                                 </p>
                             </div>
 
@@ -124,10 +131,12 @@ const Pricing = () => {
                                 )}
                             </div>
 
-                            <button className={`w-full py-4 rounded-full font-bold transition-all duration-300 ${plan.highlighted
-                                ? 'btn-glow'
-                                : 'bg-white/5 hover:bg-white/10 border border-white/10'
-                                }`}>
+                            <button
+                                onClick={() => openWhatsApp(plan.title)}
+                                className={`w-full py-4 rounded-full font-bold transition-all duration-300 ${plan.highlighted
+                                    ? 'btn-glow'
+                                    : 'bg-white/5 hover:bg-white/10 border border-white/10'
+                                    }`}>
                                 {plan.linkText || `Comenzar con ${plan.name}`}
                             </button>
                         </motion.div>
