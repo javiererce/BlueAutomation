@@ -4,23 +4,23 @@ import { CheckCircle, Zap, Shield, Clock, Orbit } from 'lucide-react';
 const reasons = [
     {
         icon: Zap,
-        title: "Atención al Instante",
-        description: "Si no respondés rápido, el cliente se va con la competencia. Nuestra IA garantiza respuestas inmediatas que cierran ventas por vos."
+        title: "Ventas Fuera de Horario",
+        description: "Tu negocio no se detiene. Capturá reservas y cerrá ventas mientras descansás, sin perder ni un solo cliente."
+    },
+    {
+        icon: CheckCircle,
+        title: "100% Automatizado",
+        description: "Respondé todas las consultas al instante. Desde dudas frecuentes hasta gestiones complejas de agenda sin intervención manual."
     },
     {
         icon: Shield,
-        title: "Operación Sin Errores",
-        description: "Eliminamos las fallas humanas y el desorden. Tu negocio funciona con la precisión de un reloj, dándote control total sin esfuerzo."
-    },
-    {
-        icon: Clock,
-        title: "Tu Tiempo es Tuyo",
-        description: "Dejá de atender consultas básicas. Delegá lo repetitivo a la IA y enfocalo en las decisiones que realmente hacen crecer tu empresa."
+        title: "Atención 24/7 Real",
+        description: "Soporte ininterrumpido en WhatsApp e Instagram sin necesidad de aumentar tu equipo humano ni tus costos fijos."
     },
     {
         icon: Orbit,
-        title: "Bajá tus Costos",
-        description: "Aumentamos tu capacidad de atención sin que tengas que contratar más personal. Eficiencia real que impacta directo en tu bolsillo."
+        title: "Reducción de Carga",
+        description: "Liberá a tu personal de las tareas repetitivas. Automatizá confirmaciones y recordatorios para que ellos se enfoquen en lo importante."
     }
 ];
 

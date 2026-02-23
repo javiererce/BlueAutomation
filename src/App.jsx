@@ -6,6 +6,8 @@ import HowItWorks from './components/HowItWorks'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Pricing from './components/Pricing'
+import UseCases from './components/UseCases'
+import FAQ from './components/FAQ'
 import { MessageCircle, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
@@ -34,15 +36,15 @@ function App() {
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollTo('services')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-medium">Servicios</button>
-            <button onClick={() => scrollTo('pricing')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-medium">Precios</button>
-            <button onClick={() => scrollTo('why-us')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-medium">Nosotros</button>
-            <button onClick={() => scrollTo('how-it-works')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-medium">Proceso</button>
-            <button onClick={() => scrollTo('contact')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-medium">Contacto</button>
+          <div className="hidden md:flex items-center gap-6">
+            <button onClick={() => scrollTo('why-us')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">Beneficios</button>
+            <button onClick={() => scrollTo('how-it-works')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">Proceso</button>
+            <button onClick={() => scrollTo('use-cases')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">Casos</button>
+            <button onClick={() => scrollTo('pricing')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">Planes</button>
+            <button onClick={() => scrollTo('faq')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">FAQ</button>
             <button
               onClick={openWhatsApp}
-              className="px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium transition-all flex items-center gap-2"
+              className="ml-4 px-6 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium transition-all flex items-center gap-2 text-sm"
             >
               <MessageCircle className="w-4 h-4 text-neon-cyan" />
               WhatsApp
@@ -58,11 +60,11 @@ function App() {
         {/* Mobile Nav */}
         {menuOpen && (
           <div className="md:hidden bg-dark/95 backdrop-blur-xl border-t border-white/5 px-6 py-6 space-y-4">
-            <button onClick={() => scrollTo('services')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2">Servicios</button>
-            <button onClick={() => scrollTo('pricing')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2">Precios</button>
-            <button onClick={() => scrollTo('why-us')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2">Nosotros</button>
-            <button onClick={() => scrollTo('how-it-works')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2">Proceso</button>
-            <button onClick={() => scrollTo('contact')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2">Contacto</button>
+            <button onClick={() => scrollTo('why-us')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">Beneficios</button>
+            <button onClick={() => scrollTo('how-it-works')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">Proceso</button>
+            <button onClick={() => scrollTo('use-cases')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">Casos de Uso</button>
+            <button onClick={() => scrollTo('pricing')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">Planes</button>
+            <button onClick={() => scrollTo('faq')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">FAQ</button>
             <button
               onClick={openWhatsApp}
               className="w-full px-5 py-3 bg-neon-cyan text-dark rounded-full font-bold transition-all flex items-center justify-center gap-2"
@@ -76,12 +78,14 @@ function App() {
 
       {/* ════════════════════════ SECCIONES ════════════════════════ */}
       <Hero />
+      <WhyUs /> {/* Moved Up: Beneficios */}
       <Stats />
-      <Services />
-      <Pricing />
-      <WhyUs />
       <HowItWorks />
+      <UseCases /> {/* New */}
+      <Services /> {/* Pila Tecnológica */}
       <Testimonials />
+      <Pricing /> {/* Moved Down */}
+      <FAQ /> {/* New */}
       <Contact />
 
       {/* ═════════════════ BOTÓN FLOTANTE WHATSAPP ═════════════════ */}

@@ -1,73 +1,71 @@
 import { motion } from 'framer-motion';
+import { MessageSquare, Cpu, CheckCircle } from 'lucide-react';
 
 const steps = [
     {
-        number: "01",
-        title: "Diagnóstico Gratuito",
-        description: "Analizamos las necesidades específicas de tu hotel o posada y detectamos las áreas que más se benefician de la automatización."
+        icon: MessageSquare,
+        title: "El cliente escribe",
+        description: "Tu cliente envía una consulta por WhatsApp, Instagram o Facebook en cualquier momento del día."
     },
     {
-        number: "02",
-        title: "Diseño de la Solución",
-        description: "Creamos un plan personalizado eligiendo los agentes ideales: WhatsApp, voz, OCR o RAG, adaptados a tu operación."
+        icon: Cpu,
+        title: "El agente resuelve",
+        description: "Tu Agente IA procesa la consulta al instante, responde dudas y gestiona la disponibilidad."
     },
     {
-        number: "03",
-        title: "Implementación Rápida",
-        description: "Ponemos en marcha tus agentes en menos de 2 semanas, con entrenamiento incluido para tu equipo."
-    },
-    {
-        number: "04",
-        title: "Soporte y Optimización",
-        description: "Monitoreamos el rendimiento de tus agentes, ajustamos respuestas y escalamos la solución según crece tu negocio."
+        icon: CheckCircle,
+        title: "Venta confirmada",
+        description: "La reserva, turno o venta queda confirmada y registrada en tus sistemas sin que tengas que hacer nada."
     }
 ];
 
 export default function HowItWorks() {
     return (
-        <section className="py-24 relative bg-dark-900" id="how-it-works">
-            <div className="container mx-auto px-6 max-w-5xl">
-                <div className="text-center mb-16">
+        <section className="py-24 relative bg-dark" id="how-it-works">
+            <div className="container mx-auto px-6 max-w-6xl relative z-10">
+                <div className="text-center mb-20">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-4"
+                        className="text-4xl md:text-6xl font-bold mb-6 text-gradient"
                     >
-                        ¿Cómo <span className="text-primary">Funciona</span>?
+                        ¿Cómo Funciona?
                     </motion.h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        Un proceso simple y transparente de principio a fin.
+                    <p className="text-gray-400 max-w-2xl mx-auto text-xl font-light">
+                        Un proceso inteligente en 3 simples pasos.
                     </p>
                 </div>
 
-                <div className="relative">
-                    {/* Línea vertical conectora */}
-                    <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/50 via-primary/20 to-transparent" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+                    {/* Línea conectora horizontal para desktop */}
+                    <div className="hidden md:block absolute top-[40%] left-[20%] right-[20%] h-px bg-gradient-to-r from-transparent via-neon-cyan/30 to-transparent" />
 
-                    <div className="space-y-12">
-                        {steps.map((step, index) => (
+                    {steps.map((step, index) => {
+                        const Icon = step.icon;
+                        return (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: 0.1 }}
-                                className={`flex flex-col md:flex-row items-center gap-8 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+                                transition={{ delay: index * 0.2 }}
+                                className="text-center relative z-10 group"
                             >
-                                <div className="flex-1 glass-card p-8">
-                                    <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                                    <p className="text-gray-400 leading-relaxed">{step.description}</p>
+                                <div className="w-24 h-24 rounded-full bg-dark border border-white/10 flex items-center justify-center mx-auto mb-8 group-hover:border-neon-cyan/50 group-hover:shadow-[0_0_30px_rgba(0,208,255,0.2)] transition-all duration-500 relative">
+                                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-neon-cyan text-dark font-bold flex items-center justify-center text-sm">
+                                        {index + 1}
+                                    </div>
+                                    <Icon className="w-10 h-10 text-neon-cyan" />
                                 </div>
-                                <div className="w-16 h-16 rounded-full bg-dark-900 border-2 border-primary flex items-center justify-center text-primary font-bold text-lg shrink-0 z-10">
-                                    {step.number}
-                                </div>
-                                <div className="flex-1 hidden md:block" />
+                                <h3 className="text-2xl font-bold mb-4 tracking-tight">{step.title}</h3>
+                                <p className="text-gray-400 font-light leading-relaxed">{step.description}</p>
                             </motion.div>
-                        ))}
-                    </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
     );
 }
+
