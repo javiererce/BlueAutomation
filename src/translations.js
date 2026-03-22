@@ -19,7 +19,7 @@ export const translations = {
             badge: "Deep Space Automation 2026",
             title1: "ATENCIÓN Y VENTAS",
             title2: "100% AUTÓNOMAS",
-            description: "Desplegamos agentes de IA especializados en atención al cliente, reservas y agendas. Automatización inteligente para canales digitales que convierte cada consulta en una oportunidad real.",
+            description: "Desplegamos agentes de inteligencia artificial especializados en atención al cliente, reservas y agendas. Automatización IA inteligente para canales digitales en Latam que convierte cada consulta en una oportunidad real.",
             ctaStart: "INICIAR TRANSFORMACIÓN",
             ctaSystems: "SISTEMAS DISPONIBLES"
         },
@@ -54,12 +54,12 @@ export const translations = {
             cards: {
                 hotels: {
                     title: "Hoteles & Posadas",
-                    desc: "Que tus huéspedes reserven solos, a cualquier hora, sin que nadie tenga que responder el teléfono.",
+                    desc: "Integra chatbots de WhatsApp para hoteles y logra que tus huéspedes reserven solos, a cualquier hora, sin que nadie tenga que responder el teléfono.",
                     benefits: ["Reservas directas sin intermediarios", "Disponibilidad siempre actualizada", "Confirmación y recordatorio automático", "Reprogramaciones sin llamadas"]
                 },
                 restaurants: {
                     title: "Restaurantes",
-                    desc: "Salón lleno, menos no-shows y cero caos en el teléfono. Todo gestionado por tu agente IA.",
+                    desc: "La mejor automatización para restaurantes: Salón lleno, menos no-shows y cero caos en el teléfono. Todo gestionado por tu agente IA.",
                     benefits: ["Reservas de mesa 24/7 por WhatsApp", "Recordatorio automático 24hs antes", "Reducción de no-shows", "Tu equipo enfocado en el servicio"]
                 },
                 digital: {
@@ -177,7 +177,7 @@ export const translations = {
                 presence: "Presencia en Uruguay, Chile, Brasil y Paraguay",
                 rights: "Blue Automations SYSTEM // TODOS LOS DERECHOS RESERVADOS",
                 designed: "DISEÑADO PARA LA PERSPECTIVA DEL ESPACIO PROFUNDO",
-                description: "Especializados en el desarrollo e implementación de agentes de IA para la automatización de atención al cliente y procesos operativos."
+                description: "Blue Automations: Especializados en el desarrollo e implementación de agentes de inteligencia artificial para la automatización de restaurantes, hoteles y negocios en Latam."
             }
         }
     },

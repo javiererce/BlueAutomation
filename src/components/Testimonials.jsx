@@ -67,6 +67,7 @@ export default function Testimonials() {
                                         <img
                                             src={data.image}
                                             alt={data.name}
+                                            loading="lazy"
                                             className="relative w-14 h-14 rounded-full object-cover border-2 border-dark"
                                         />
                                     </div>
