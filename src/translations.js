@@ -41,26 +41,26 @@ export const translations = {
         },
         howItWorks: {
             title: "¿Cómo Funciona?",
-            description: "Un proceso inteligente en 3 simples pasos.",
+            description: "Tu cliente reserva solo. Vos no hacés nada.",
             steps: [
-                { title: "El cliente escribe", desc: "Tu cliente envía una consulta por WhatsApp, Instagram o Facebook en cualquier momento del día." },
-                { title: "El agente resuelve", desc: "Tu Agente IA procesa la consulta al instante, responde dudas y gestiona la disponibilidad." },
-                { title: "Venta confirmada", desc: "La reserva, turno o venta queda confirmada y registrada en tus sistemas sin que tengas que hacer nada." }
+                { title: "Tu cliente escribe por WhatsApp", desc: "A cualquier hora, tu cliente manda un mensaje pidiendo una mesa, habitación o turno. Puede ser a las 11pm o el domingo a las 8am." },
+                { title: "El agente responde en segundos", desc: "Sin esperas. Muestra la disponibilidad real, responde preguntas y guía al cliente paso a paso hasta confirmar." },
+                { title: "Reserva confirmada + recordatorio automático", desc: "La reserva queda registrada en tu calendario al instante. Un día antes, el agente le recuerda la cita al cliente solo, sin que vos hagas nada." }
             ]
         },
         useCases: {
-            title: "Soluciones por Industria",
-            subtitle: "Diseñamos agentes especializados que entienden los desafíos específicos de tu sector.",
+            title: "¿Para quién es esto?",
+            subtitle: "Diseñado para restaurantes y hoteles que quieren llenar su agenda sin depender del teléfono.",
             cards: {
                 hotels: {
                     title: "Hoteles & Posadas",
-                    desc: "Gestión inteligente de huéspedes y reservas directas.",
-                    benefits: ["Check-in digital automático", "Respuestas 24/7 a consultas", "Gestión de availability", "Sincronización con PMS"]
+                    desc: "Que tus huéspedes reserven solos, a cualquier hora, sin que nadie tenga que responder el teléfono.",
+                    benefits: ["Reservas directas sin intermediarios", "Disponibilidad siempre actualizada", "Confirmación y recordatorio automático", "Reprogramaciones sin llamadas"]
                 },
                 restaurants: {
                     title: "Restaurantes",
-                    desc: "Tu salón siempre lleno y personal enfocado en el servicio.",
-                    benefits: ["Reservas de mesa automáticas", "Confirmación vía WhatsApp", "Menú digital interactivo", "Recordatorios de asistencia"]
+                    desc: "Salón lleno, menos no-shows y cero caos en el teléfono. Todo gestionado por tu agente IA.",
+                    benefits: ["Reservas de mesa 24/7 por WhatsApp", "Recordatorio automático 24hs antes", "Reducción de no-shows", "Tu equipo enfocado en el servicio"]
                 },
                 digital: {
                     title: "E-commerce & Negocios",
@@ -70,16 +70,16 @@ export const translations = {
             }
         },
         services: {
-            badge: "Capacidades del Sistema",
-            title: "IMPULSANDO TUS RESULTADOS",
-            subtitle: "Maximizá tu capacidad de atención y ventas sin aumentar tus costos operativos. Resolvemos el caos para que vos solo te ocupes de crecer.",
+            badge: "Tu Recepcionista Digital en WhatsApp",
+            title: "RESERVAS QUE SE GESTIONAN SOLAS",
+            subtitle: "Un agente de IA que atiende, muestra disponibilidad, confirma reservas y manda recordatorios — sin que vos ni tu equipo tengan que intervenir.",
             items: [
-                { title: "Captación de Ventas 24/7", desc: "Dejá de perder ventas fuera de horario. Nuestra IA responde al instante, califica prospectos y cierra el trato por vos, los 365 días del año." },
-                { title: "Agenda Siempre Llena", desc: "Eliminamos el ida y vuelta infinito para coordinar un turno. La IA autogestiona tu disponibilidad y confirma citas automáticamente en tu calendario." },
-                { title: "Liberación de Equipo", desc: "Tu personal gasta el 70% de su tiempo en tareas repetitivas. Automatizamos lo operativo para que ellos se enfoquen en vender y dar un servicio premium." },
-                { title: "Infraestructura de Escala", desc: "Crecé sin límites. Atendé a 100 o 10,000 clientes simultáneamente sin contratar más personal ni aumentar tus costos fijos operativos." }
+                { title: "Atiende a las 3am sin quejas", desc: "Tu cliente escribe a la hora que quiere. El agente responde en segundos, muestra horarios disponibles y confirma la reserva al instante. Sin perderte ninguna oportunidad." },
+                { title: "Tu agenda, siempre al día", desc: "Se conecta con Google Calendar y actualiza la disponibilidad en tiempo real. Nada de doble reserva, nada de confusiones. Todo sincronizado automáticamente." },
+                { title: "Menos llamadas, más tiempo libre", desc: "El 80% de las consultas que recibís hoy por teléfono las puede resolver el agente solo. Tu equipo deja de interrumpirse para confirmar turnos y se enfoca en el servicio." },
+                { title: "Recordatorios que reducen no-shows", desc: "El día antes de cada reserva, el agente le escribe al cliente para recordarle. Resultado: menos cancelaciones de último momento y salón más lleno." }
             ],
-            explore: "EXPLORAR MÓDULO"
+            explore: "PROBÁ EN VIVO"
         },
         testimonials: {
             title1: "Voces Reales,",
@@ -104,30 +104,32 @@ export const translations = {
             plans: {
                 plan1: {
                     name: "Plan 1",
-                    title: "Agente Reservas / Agenda",
-                    desc: "Gestión inteligente de disponibilidad y citas.",
-                    benefits: ["Atención automática 24/7", "Gestión de reservas o turnos", "Confirmaciones automáticas", "Recordatorios", "Múltiples idiomas incluidos", "Hasta volumen estándar"],
-                    notIncluded: ["Integraciones complejas", "CRM personalizado", "Desarrollo a medida"]
+                    title: "Recepcionista IA para WhatsApp",
+                    desc: "Tu agente de reservas que trabaja 24/7, sin descanso y sin errores.",
+                    benefits: ["Atención automática 24/7 por WhatsApp", "Muestra disponibilidad en tiempo real", "Confirma reservas al instante", "Integración con Google Calendar", "Recordatorios automáticos 24hs antes", "Gestiona reprogramaciones sin llamadas"],
+                    notIncluded: ["Integraciones complejas", "CRM personalizado", "Desarrollo a medida"],
+                    action: "Probá cómo responde en vivo"
                 },
                 plan2: {
                     name: "Plan 2",
-                    title: "Agente Pro Operativo",
-                    desc: "Automatización total para escalar tu operación.",
-                    benefits: ["Todo lo anterior", "Integraciones con sistemas", "Envío de links de pago", "Reporte mensual", "Lógica personalizada avanzada"]
+                    title: "Tu Operación en Piloto Automático",
+                    desc: "El agente que no solo reserva: responde preguntas de tus clientes, automatiza tareas del día a día y te envía un resumen diario de tu negocio.",
+                    benefits: ["Todo del Plan 1", "Tus clientes preguntan horarios, menú o precios → el agente responde solo", "Sos’ avisado de lo importante sin revisar nada", "Recibís un resumen diario automático", "Menos trabajo manual, mejor atención", "Integración con tus sistemas actuales"],
+                    action: "Quiero mi operación en piloto automático"
                 },
                 optionA: {
                     name: "Opción A",
-                    title: "Solo Landing Web",
-                    desc: "Tu base digital optimizada para convertir.",
-                    benefits: ["Página profesional en pocos días", "Diseño optimizado para mobile", "Botón WhatsApp estratégico", "Galería, Mapa y Servicios"],
-                    action: "Solicitar Web"
+                    title: "Tu Web Lista para Recibir Reservas",
+                    desc: "Una página profesional que trabaja para vos: atrae clientes desde Google, muestra tu negocio y recibe reservas por WhatsApp — sin que tengas que hacer nada.",
+                    benefits: ["Más reservas desde Google (SEO incluido)", "Diseño mobile-first (perfecta en celular)", "Botón de WhatsApp con mensaje prearmado", "Formulario conectado directo a tu WhatsApp", "No es solo una web: es tu sistema de ventas automático"],
+                    action: "Quiero mi web lista para recibir reservas"
                 },
                 optionB: {
                     name: "Opción B",
-                    title: "Combo Web + Agente",
-                    desc: "La solución definitiva: Web profesional con Agente de IA integrado.",
-                    benefits: ["Todo de la Opción A", "Integración de Agente IA", "Setup completo bonificado", "Sincronización total de consultas", "🚀 Combo Lanzamiento 2026"],
-                    action: "Aprovechar Combo"
+                    title: "El Equipo Completo: Web + Agente",
+                    desc: "Tu negocio funcionando al 100%. Una web espectacular que atrae a los clientes, y un agente de IA que los atiende en WhatsApp al instante para cerrar la reserva.",
+                    benefits: ["Todo lo de la Opción A (Web) y el Plan 1 (Agente)", "La web y el WhatsApp conectados y listos para vender", "Nos encargamos de dejar todo configurado", "Sin costo de instalación (Setup bonificado)", "🚀 Combo Lanzamiento 2026"],
+                    action: "Quiero el equipo completo"
                 }
             }
         },
@@ -144,9 +146,9 @@ export const translations = {
             ]
         },
         finalCTA: {
-            title: "¿Listo para automatizar tu éxito?",
-            subtitle: "Maximiza tus márgenes y reduce tu carga operativa con infraestructura de IA centralizada y escalable.",
-            button: "Consultar Implementación"
+            title: "¿Tu negocio sigue perdiendo reservas por no responder a tiempo?",
+            subtitle: "Probá en vivo cómo responde el agente. En menos de 10 minutos vas a ver exactamente lo que haría con tus clientes.",
+            button: "Probá cómo responde en vivo"
         },
         contact: {
             title1: "EL FUTURO NO ESPERA,",
@@ -220,27 +222,27 @@ export const translations = {
             efficiency: "Op. Efficiency"
         },
         howItWorks: {
-            title: "How It Works?",
-            description: "An intelligent process in 3 simple steps.",
+            title: "How Does It Work?",
+            description: "Your customer books on their own. You don't do a thing.",
             steps: [
-                { title: "Client message", desc: "Your client sends a query via WhatsApp, Instagram, or Facebook at any time of the day." },
-                { title: "Agent solves", desc: "Your AI Agent processes the query instantly, answers questions, and manages availability." },
-                { title: "Confirmed sale", desc: "The reservation, booking, or sale is confirmed and registered in your systems without you having to do anything." }
+                { title: "Your customer messages on WhatsApp", desc: "At any hour, your customer sends a message asking for a table, room, or appointment — at 11pm or Sunday morning." },
+                { title: "The agent replies in seconds", desc: "No waiting. It shows real availability, answers questions, and guides the customer step by step until confirmed." },
+                { title: "Booking confirmed + automatic reminder", desc: "The booking is logged in your calendar instantly. The day before, the agent reminds your customer — all on its own." }
             ]
         },
         useCases: {
-            title: "Industry Solutions",
-            subtitle: "We design specialized agents that understand the specific challenges of your sector.",
+            title: "Who Is This For?",
+            subtitle: "Built for restaurants and hotels that want a full schedule without depending on the phone.",
             cards: {
                 hotels: {
                     title: "Hotels & Inns",
-                    desc: "Intelligent guest management and direct bookings.",
-                    benefits: ["Automatic digital check-in", "24/7 inquiry response", "Availability management", "PMS synchronization"]
+                    desc: "Let your guests book on their own, any hour, without anyone needing to answer the phone.",
+                    benefits: ["Direct bookings without intermediaries", "Always up-to-date availability", "Automatic confirmation and reminder", "Rescheduling without phone calls"]
                 },
                 restaurants: {
                     title: "Restaurants",
-                    desc: "Keep your dining room full and staff focused on service.",
-                    benefits: ["Automatic table bookings", "WhatsApp confirmation", "Interactive digital menu", "Attendance reminders"]
+                    desc: "Full dining room, fewer no-shows, zero phone chaos — all managed by your AI agent.",
+                    benefits: ["24/7 table bookings via WhatsApp", "Automatic reminder 24h before", "Reduced no-shows", "Your team focused on service"]
                 },
                 digital: {
                     title: "E-commerce & Business",
@@ -250,21 +252,21 @@ export const translations = {
             }
         },
         finalCTA: {
-            title: "Ready to automate your success?",
-            subtitle: "Maximize your margins and reduce your operating load with centralized and scalable AI infrastructure.",
-            button: "Consult Implementation"
+            title: "Still losing bookings because you didn't respond in time?",
+            subtitle: "See the agent reply live. In under 10 minutes you'll know exactly what it would do with your customers.",
+            button: "See it reply live"
         },
         services: {
-            badge: "System Capabilities",
-            title: "DRIVING YOUR RESULTS",
-            subtitle: "Maximize your support and sales capacity without increasing operating costs. We solve the chaos so you can focus on growing.",
+            badge: "Your Digital Receptionist on WhatsApp",
+            title: "BOOKINGS THAT MANAGE THEMSELVES",
+            subtitle: "An AI agent that handles inquiries, shows availability, confirms bookings, and sends reminders — without you or your team lifting a finger.",
             items: [
-                { title: "24/7 Sales Lead Gen", desc: "Stop losing sales after hours. Our AI responds instantly, qualifies prospects, and closes the deal for you, 365 days a year." },
-                { title: "Always Full Booking", desc: "We eliminate the infinite back-and-forth of scheduling. The AI self-manages availability and confirms appointments automatically in your calendar." },
-                { title: "Team Liberation", desc: "Your staff spends 70% of their time on repetitive tasks. We automate operations so they can focus on selling and providing premium service." },
-                { title: "Scale Infrastructure", desc: "Grow without limits. Serve 100 or 10,000 clients simultaneously without hiring more staff or increasing fixed costs." }
+                { title: "Handles 3am messages without complaints", desc: "Your customer writes whenever they want. The agent replies in seconds, shows available slots, and confirms the booking instantly. You miss nothing." },
+                { title: "Your calendar, always current", desc: "Connects to Google Calendar and updates availability in real time. No double bookings, no confusion. Everything synced automatically." },
+                { title: "Fewer calls, more free time", desc: "80% of the phone calls you get today can be handled by the agent alone. Your team stops interrupting themselves to confirm appointments." },
+                { title: "Reminders that cut no-shows", desc: "The day before each booking, the agent messages your customer to remind them. Result: fewer last-minute cancellations and a fuller room." }
             ],
-            explore: "EXPLORE MODULE"
+            explore: "SEE IT LIVE"
         },
         testimonials: {
             title1: "Real Voices,",
@@ -289,30 +291,32 @@ export const translations = {
             plans: {
                 plan1: {
                     name: "Plan 1",
-                    title: "Booking / Schedule Agent",
-                    desc: "Intelligent availability and appointment management.",
-                    benefits: ["24/7 automatic support", "Booking or schedule management", "Automatic confirmations", "Reminders", "Multi-language included", "Up to standard volume"],
-                    notIncluded: ["Complex integrations", "Custom CRM", "Tailor-made development"]
+                    title: "AI Receptionist for WhatsApp",
+                    desc: "Your booking agent that works 24/7 — never tired, never wrong.",
+                    benefits: ["24/7 automatic support via WhatsApp", "Shows real-time availability", "Confirms bookings instantly", "Google Calendar integration", "Automatic reminders 24h before", "Handles rescheduling without calls"],
+                    notIncluded: ["Complex integrations", "Custom CRM", "Tailor-made development"],
+                    action: "See it reply live"
                 },
                 plan2: {
                     name: "Plan 2",
-                    title: "Pro Operational Agent",
-                    desc: "Total automation to scale your operation.",
-                    benefits: ["Everything in Plan 1", "System integrations", "Payment link sending", "Monthly report", "Advanced custom logic"]
+                    title: "Your Operation on Autopilot",
+                    desc: "The agent that does more than bookings: answers customer questions, handles daily tasks, and sends you an automatic summary of your business every day.",
+                    benefits: ["Everything in Plan 1", "Customers ask about hours, menu or prices → the agent replies on its own", "Get notified about what matters without checking anything", "Automatic daily summary delivered to you", "Less manual work, better customer experience", "Integration with your current systems"],
+                    action: "Put my operation on autopilot"
                 },
                 optionA: {
                     name: "Option A",
-                    title: "Solo Landing Web",
-                    desc: "Your digital base optimized to convert.",
-                    benefits: ["Professional page in a few days", "Mobile-optimized design", "Strategic WhatsApp button", "Gallery, Map, and Services"],
-                    action: "Request Web"
+                    title: "Your Website Ready to Take Bookings",
+                    desc: "A professional page that works for you: attracts customers from Google, showcases your business, and receives bookings via WhatsApp — without you doing a thing.",
+                    benefits: ["More bookings from Google (SEO included)", "Mobile-first design (looks great on phones)", "WhatsApp button with pre-written message", "Form connected directly to your WhatsApp", "Not just a website: your automated sales system"],
+                    action: "I want my website ready to take bookings"
                 },
                 optionB: {
                     name: "Option B",
-                    title: "Web + Agent Combo",
-                    desc: "The ultimate solution: Professional Web with integrated AI Agent.",
-                    benefits: ["Everything in Option A", "AI Agent integration", "Waived setup fee", "Full query synchronization", "🚀 2026 Launch Combo"],
-                    action: "Get Combo"
+                    title: "The Ultimate Team: Web + Agent",
+                    desc: "Your business running at 100%. A stunning website that attracts customers, and an AI agent that handles them instantly on WhatsApp to close the booking.",
+                    benefits: ["Everything in Option A (Web) and Plan 1 (Agent)", "Website and WhatsApp connected and ready to sell", "We handle all the setup for you", "No installation fee (Setup waived)", "🚀 2026 Launch Combo"],
+                    action: "I want the ultimate team"
                 }
             }
         },
@@ -401,26 +405,26 @@ export const translations = {
         },
         howItWorks: {
             title: "Como Funciona?",
-            description: "Um processo inteligente em 3 passos simples.",
+            description: "Seu cliente reserva sozinho. Você não faz nada.",
             steps: [
-                { title: "O cliente escreve", desc: "Seu cliente envia uma consulta pelo WhatsApp, Instagram ou Facebook em qualquer momento do dia." },
-                { title: "O agente resolve", desc: "Seu Agente IA processa a consulta instantaneamente, responde dúvidas e faz a gestão da disponibilidade." },
-                { title: "Venda confirmada", desc: "A reserva, agendamento ou venda é confirmada e registrada em seus sistemas sem que você precise fazer nada." }
+                { title: "Seu cliente escreve pelo WhatsApp", desc: "A qualquer hora, seu cliente manda uma mensagem pedindo uma mesa, quarto ou horário. Pode ser às 23h ou domingo de manhã." },
+                { title: "O agente responde em segundos", desc: "Sem espera. Mostra a disponibilidade real, responde dúvidas e guia o cliente até confirmar a reserva." },
+                { title: "Reserva confirmada + lembrete automático", desc: "A reserva fica registrada no seu calendário na hora. Um dia antes, o agente lembra o cliente sozinho, sem você fazer nada." }
             ]
         },
         useCases: {
-            title: "Soluções por Indústria",
-            subtitle: "Projetamos agentes especializados que entendem os desafios específicos do seu setor.",
+            title: "Para Quem É Isso?",
+            subtitle: "Feito para restaurantes e hotéis que querem agenda cheia sem depender do telefone.",
             cards: {
                 hotels: {
                     title: "Hotéis & Pousadas",
-                    desc: "Gestão inteligente de hóspedes e reservas diretas.",
-                    benefits: ["Check-in digital automático", "Respostas 24/7 a consultas", "Gestão de availability", "Sincronização com PMS"]
+                    desc: "Deixe seus hóspedes reservarem sozinhos, a qualquer hora, sem ninguém precisar atender o telefone.",
+                    benefits: ["Reservas diretas sem intermediários", "Disponibilidade sempre atualizada", "Confirmação e lembrete automático", "Reagendamentos sem telefonemas"]
                 },
                 restaurants: {
                     title: "Restaurantes",
-                    desc: "Seu salão sempre cheio e equipe focada no serviço.",
-                    benefits: ["Reservas de mesa automáticas", "Confirmação via WhatsApp", "Menu digital interativo", "Lembretes de presença"]
+                    desc: "Salão cheio, menos cancelamentos e zero caos no telefone — tudo gerenciado pelo seu agente IA.",
+                    benefits: ["Reservas de mesa 24/7 pelo WhatsApp", "Lembrete automático 24h antes", "Redução de no-shows", "Sua equipe focada no atendimento"]
                 },
                 digital: {
                     title: "E-commerce & Negócios",
@@ -430,21 +434,21 @@ export const translations = {
             }
         },
         finalCTA: {
-            title: "Pronto para automatizar seu sucesso?",
-            subtitle: "Maximize suas margens e reduza sua carga operacional com infraestrutura de IA centralizada e escalável.",
-            button: "Consultar Implementação"
+            title: "Seu negócio ainda perde reservas por não responder a tempo?",
+            subtitle: "Veja o agente responder ao vivo. Em menos de 10 minutos você vai saber exatamente o que ele faria com seus clientes.",
+            button: "Veja como responde ao vivo"
         },
         services: {
-            badge: "Capacidades do System",
-            title: "IMPULSIONANDO SEUS RESULTADOS",
-            subtitle: "Maximize sua capacidade de atendimento e vendas sem aumentar seus custos operacionais. Resolvemos o caos para que você foque apenas em crescer.",
+            badge: "Sua Recepcionista Digital no WhatsApp",
+            title: "RESERVAS QUE SE GERENCIAM SOZINHAS",
+            subtitle: "Um agente de IA que atende, mostra disponibilidade, confirma reservas e envia lembretes — sem você ou sua equipe precisarem intervir.",
             items: [
-                { title: "Captação de Vendas 24/7", desc: "Pare de perder vendas fora de hora. Nossa IA responde instantaneamente, qualifica leads e fecha o negócio por você, 365 dias por ano." },
-                { title: "Agenda Sempre Cheia", desc: "Eliminamos o vai e vem infinito para coordenar um horário. A IA autogere sua disponibilidade e confirma agendamentos automaticamente no seu calendário." },
-                { title: "Liberação de Equipe", desc: "Sua equipe gasta 70% do tempo em tarefas repetitivas. Automatizamos o operacional para que eles foquem em vender e dar um serviço premium." },
-                { title: "Infraestrutura de Escala", desc: "Cresça sem limites. Atenda 100 ou 10.000 clientes simultaneamente sem contratar mais pessoal ou aumentar custos fixos." }
+                { title: "Atende às 3h da manhã sem reclamar", desc: "Seu cliente escreve quando quiser. O agente responde em segundos, mostra os horários disponíveis e confirma a reserva na hora. Sem perder nenhuma oportunidade." },
+                { title: "Sua agenda, sempre atualizada", desc: "Conecta ao Google Calendar e atualiza a disponibilidade em tempo real. Nada de reserva dupla, nada de confusão. Tudo sincronizado automaticamente." },
+                { title: "Menos ligações, mais tempo livre", desc: "80% das ligações que você recebe hoje podem ser resolvidas pelo agente sozinho. Sua equipe para de se interromper para confirmar horários." },
+                { title: "Lembretes que reduzem cancelamentos", desc: "No dia anterior a cada reserva, o agente manda mensagem pro cliente lembrando. Resultado: menos cancelamentos de última hora e salão mais cheio." }
             ],
-            explore: "EXPLORAR MÓDULO"
+            explore: "VER AO VIVO"
         },
         testimonials: {
             title1: "Vozes Reais,",
@@ -469,30 +473,32 @@ export const translations = {
             plans: {
                 plan1: {
                     name: "Plano 1",
-                    title: "Agente Reservas / Agenda",
-                    desc: "Gestão inteligente de disponibilidade e agendamentos.",
-                    benefits: ["Atendimento automático 24/7", "Gestão de reservas ou horários", "Confirmações automáticas", "Lembretes", "Vários idiomas incluídos", "Até volume padrão"],
-                    notIncluded: ["Integrações complexas", "CRM personalizado", "Desenvolvimento sob medida"]
+                    title: "Recepcionista IA para WhatsApp",
+                    desc: "Seu agente de reservas que trabalha 24/7, sem descanso e sem erros.",
+                    benefits: ["Atendimento automático 24/7 pelo WhatsApp", "Mostra disponibilidade em tempo real", "Confirma reservas na hora", "Integração com Google Calendar", "Lembretes automáticos 24h antes", "Gerencia reagendamentos sem ligações"],
+                    notIncluded: ["Integrações complexas", "CRM personalizado", "Desenvolvimento sob medida"],
+                    action: "Veja como responde ao vivo"
                 },
                 plan2: {
                     name: "Plano 2",
-                    title: "Agente Pro Operacional",
-                    desc: "Automação total para escalar sua operação.",
-                    benefits: ["Tudo do Plano 1", "Integrações com sistemas", "Envio de links de pagamento", "Relatório mensal", "Lógica personalizada avançada"]
+                    title: "Sua Operação no Piloto Automático",
+                    desc: "O agente que vai além das reservas: responde dúvidas dos clientes, automatiza tarefas do dia a dia e te envia um resumo diário do seu negócio.",
+                    benefits: ["Tudo do Plano 1", "Clientes perguntam horários, cardápio ou preços → o agente responde sozinho", "Você é avisado do que importa sem precisar verificar nada", "Resumo diário automático entregue pra você", "Menos trabalho manual, melhor atendimento", "Integração com seus sistemas atuais"],
+                    action: "Quero minha operação no piloto automático"
                 },
                 optionA: {
                     name: "Opção A",
-                    title: "Apenas Landing Web",
-                    desc: "Sua base digital otimizada para converter.",
-                    benefits: ["Página profissional em poucos dias", "Design otimizado para mobile", "Botão WhatsApp estratégico", "Galeria, Mapa e Serviços"],
-                    action: "Solicitar Web"
+                    title: "Seu Site Pronto para Receber Reservas",
+                    desc: "Uma página profissional que trabalha por você: atrai clientes pelo Google, mostra seu negócio e recebe reservas pelo WhatsApp — sem você precisar fazer nada.",
+                    benefits: ["Mais reservas pelo Google (SEO incluído)", "Design mobile-first (perfeito no celular)", "Botão WhatsApp com mensagem pré-escrita", "Formulário conectado direto no seu WhatsApp", "Não é só um site: é seu sistema de vendas automático"],
+                    action: "Quero meu site pronto para receber reservas"
                 },
                 optionB: {
                     name: "Opção B",
-                    title: "Combo Web + Agente",
-                    desc: "A solução definitiva: Web profissional com Agente de IA integrado.",
-                    benefits: ["Tudo da Opção A", "Integração de Agente IA", "Taxa de setup isenta", "Sincronização total de consultas", "🚀 Combo Lançamento 2026"],
-                    action: "Aproveitar Combo"
+                    title: "A Equipe Completa: Site + Agente",
+                    desc: "Seu negócio funcionando a 100%. Um site espetacular que atrai clientes e um agente de IA que os atende instantaneamente no WhatsApp para fechar a reserva.",
+                    benefits: ["Tudo da Opção A (Site) e do Plano 1 (Agente)", "Site e WhatsApp conectados e prontos para vender", "Nós configuramos tudo para você", "Sem taxa de instalação (Setup isento)", "🚀 Combo Lançamento 2026"],
+                    action: "Quero a equipe completa"
                 }
             }
         },
