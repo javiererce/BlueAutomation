@@ -68,19 +68,19 @@ function App() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-6">
-            <button onClick={() => scrollTo('why-us')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">{t.nav.benefits}</button>
-            <button onClick={() => scrollTo('how-it-works')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">{t.nav.process}</button>
-            <button onClick={() => scrollTo('use-cases')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">{t.nav.cases}</button>
-            <button onClick={() => scrollTo('pricing')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">{t.nav.plans}</button>
-            <button onClick={() => scrollTo('faq')} className="text-gray-400 hover:text-neon-cyan transition-colors text-xs font-medium uppercase tracking-wider">{t.nav.faq}</button>
+            <button onClick={() => scrollTo('why-us')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.benefits}</button>
+            <button onClick={() => scrollTo('how-it-works')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.process}</button>
+            <button onClick={() => scrollTo('use-cases')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.cases}</button>
+            <button onClick={() => scrollTo('pricing')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.plans}</button>
+            <button onClick={() => scrollTo('faq')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.faq}</button>
 
             {/* Language Switcher */}
             <div className="relative">
               <button
                 onClick={() => setLangMenuOpen(!langMenuOpen)}
-                className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 border border-white/10 text-xs font-bold hover:bg-white/10 transition-all uppercase tracking-tighter"
+                className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/5 border border-white/10 text-sm font-bold hover:bg-white/10 transition-all uppercase tracking-tighter"
               >
-                <Globe className="w-3 h-3 text-neon-cyan" />
+                <Globe className="w-4 h-4 text-neon-cyan" />
                 {languages.find(l => l.code === language)?.name}
                 <ChevronDown className={`w-3 h-3 transition-transform ${langMenuOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -94,7 +94,7 @@ function App() {
                         setLanguage(lang.code);
                         setLangMenuOpen(false);
                       }}
-                      className={`w-full px-4 py-2 text-left text-xs font-bold hover:bg-neon-cyan/10 transition-colors flex items-center gap-2 ${language === lang.code ? 'text-neon-cyan' : 'text-gray-400'}`}
+                      className={`w-full px-4 py-2 text-left text-sm font-bold hover:bg-neon-cyan/10 transition-colors flex items-center gap-2 ${language === lang.code ? 'text-neon-cyan' : 'text-gray-400'}`}
                     >
                       <span>{lang.flag}</span>
                       {lang.name}
@@ -106,7 +106,7 @@ function App() {
 
             <button
               onClick={openWhatsApp}
-              className="ml-2 px-5 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium transition-all flex items-center gap-2 text-xs"
+              className="ml-2 px-5 py-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full font-medium transition-all flex items-center gap-2 text-sm"
             >
               <MessageCircle className="w-4 h-4 text-neon-cyan" />
               {t.nav.whatsapp}
@@ -135,11 +135,11 @@ function App() {
         {/* Mobile Nav */}
         {menuOpen && (
           <div className="md:hidden bg-dark/95 backdrop-blur-xl border-t border-white/5 px-6 py-6 space-y-4">
-            <button onClick={() => scrollTo('why-us')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">{t.nav.benefits}</button>
-            <button onClick={() => scrollTo('how-it-works')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">{t.nav.process}</button>
-            <button onClick={() => scrollTo('use-cases')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">{t.nav.cases}</button>
-            <button onClick={() => scrollTo('pricing')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">{t.nav.plans}</button>
-            <button onClick={() => scrollTo('faq')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-xs tracking-widest font-bold">{t.nav.faq}</button>
+            <button onClick={() => scrollTo('why-us')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.benefits}</button>
+            <button onClick={() => scrollTo('how-it-works')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.process}</button>
+            <button onClick={() => scrollTo('use-cases')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.cases}</button>
+            <button onClick={() => scrollTo('pricing')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.plans}</button>
+            <button onClick={() => scrollTo('faq')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.faq}</button>
             <button
               onClick={openWhatsApp}
               className="w-full px-5 py-3 bg-neon-cyan text-dark rounded-full font-bold transition-all flex items-center justify-center gap-2"
