@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Stats from './components/Stats'
@@ -12,6 +13,7 @@ import TechMarquee from './components/TechMarquee'
 import { MessageCircle, Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { useState } from 'react'
 import { useLanguage } from './LanguageContext'
+import Hoteles from './pages/Hoteles'
 
 const WHATSAPP_NUMBER = '541168873648';
 
@@ -41,6 +43,9 @@ function App() {
   ];
 
   return (
+    <Routes>
+      <Route path="/hoteles" element={<Hoteles />} />
+      <Route path="/*" element={
     <main className="min-h-screen bg-dark text-white selection:bg-neon-cyan/30 scroll-smooth">
       {/* ═══════════════════════════ TOP BAR URGENCIA ═══════════════════════════ */}
       <div className="bg-neon-gradient py-4 px-6 relative z-[60] overflow-hidden">
@@ -241,6 +246,8 @@ function App() {
         </div>
       </footer>
     </main>
+      } />
+    </Routes>
   );
 }
 
