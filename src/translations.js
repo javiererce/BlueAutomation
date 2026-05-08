@@ -6,6 +6,7 @@ export const translations = {
             cases: "Casos",
             plans: "Planes",
             faq: "FAQ",
+            hotels: "Hoteles",
             contact: "Contacto",
             whatsapp: "WhatsApp",
             demo: "Agendá tu Demo",
@@ -119,10 +120,10 @@ export const translations = {
                 },
                 optionA: {
                     name: "Opción A",
-                    title: "Tu Web Lista para Recibir Reservas",
-                    desc: "Una página profesional que trabaja para vos: atrae clientes desde Google, muestra tu negocio y recibe reservas por WhatsApp — sin que tengas que hacer nada.",
-                    benefits: ["Más reservas desde Google (SEO incluido)", "Diseño mobile-first (perfecta en celular)", "Botón de WhatsApp con mensaje prearmado", "Formulario conectado directo a tu WhatsApp", "No es solo una web: es tu sistema de ventas automático"],
-                    action: "Quiero mi web lista para recibir reservas"
+                    title: "Tu Web Hotelera de Alta Conversión",
+                    desc: "Una página profesional diseñada exclusivamente para hoteles: atrae huéspedes desde Google, muestra tus instalaciones y recibe reservas directas.",
+                    benefits: ["Especializada en Hotelería (SEO incluido)", "Diseño de lujo mobile-first", "Botón de WhatsApp con mensaje prearmado", "Formulario de reserva directo a tu WhatsApp", "Tu motor de reservas propio sin comisiones"],
+                    action: "Quiero mi web hotelera de alta conversión"
                 },
                 optionB: {
                     name: "Opción B",
@@ -175,9 +176,9 @@ export const translations = {
                 contact: "Contacto",
                 location: "Buenos Aires, Argentina",
                 presence: "Presencia en Uruguay, Chile, Brasil y Paraguay",
-                rights: "Blue Automations SYSTEM // TODOS LOS DERECHOS RESERVADOS",
+                rights: "Blue Automation SYSTEM // TODOS LOS DERECHOS RESERVADOS",
                 designed: "DISEÑADO PARA LA PERSPECTIVA DEL ESPACIO PROFUNDO",
-                description: "Blue Automations: Especializados en el desarrollo e implementación de agentes de inteligencia artificial para la automatización de restaurantes, hoteles y negocios en Latam."
+                description: "Blue Automation: Especializados en el desarrollo e implementación de agentes de inteligencia artificial para la automatización de restaurantes, hoteles y negocios en Latam."
             }
         }
     },
@@ -188,6 +189,7 @@ export const translations = {
             cases: "Cases",
             plans: "Plans",
             faq: "FAQ",
+            hotels: "Hotels",
             contact: "Contact",
             whatsapp: "WhatsApp",
             demo: "Book a Demo",
@@ -306,10 +308,10 @@ export const translations = {
                 },
                 optionA: {
                     name: "Option A",
-                    title: "Your Website Ready to Take Bookings",
-                    desc: "A professional page that works for you: attracts customers from Google, showcases your business, and receives bookings via WhatsApp — without you doing a thing.",
-                    benefits: ["More bookings from Google (SEO included)", "Mobile-first design (looks great on phones)", "WhatsApp button with pre-written message", "Form connected directly to your WhatsApp", "Not just a website: your automated sales system"],
-                    action: "I want my website ready to take bookings"
+                    title: "Your High-Conversion Hotel Website",
+                    desc: "A professional page designed exclusively for hotels: attracts guests from Google, showcases your facilities, and receives direct bookings.",
+                    benefits: ["Hospitality-specialized SEO included", "Luxury mobile-first design", "WhatsApp button with pre-written message", "Booking form direct to your WhatsApp", "Your own commission-free booking engine"],
+                    action: "I want my high-conversion hotel website"
                 },
                 optionB: {
                     name: "Option B",
@@ -357,7 +359,7 @@ export const translations = {
                 contact: "Contact",
                 location: "Buenos Aires, Argentina",
                 presence: "Regional presence in Uruguay, Chile, Brazil, and Paraguay",
-                rights: "Blue Automations SYSTEM // ALL RIGHTS RESERVED",
+                rights: "Blue Automation SYSTEM // ALL RIGHTS RESERVED",
                 designed: "DESIGNED FOR THE DEEP SPACE PERSPECTIVE",
                 description: "Specialized in the development and implementation of AI agents for automating customer service and operational processes."
             }
@@ -370,6 +372,7 @@ export const translations = {
             cases: "Casos",
             plans: "Planos",
             faq: "FAQ",
+            hotels: "Hotéis",
             contact: "Contato",
             whatsapp: "WhatsApp",
             demo: "Agendar Demo",
@@ -488,10 +491,10 @@ export const translations = {
                 },
                 optionA: {
                     name: "Opção A",
-                    title: "Seu Site Pronto para Receber Reservas",
-                    desc: "Uma página profissional que trabalha por você: atrai clientes pelo Google, mostra seu negócio e recebe reservas pelo WhatsApp — sem você precisar fazer nada.",
-                    benefits: ["Mais reservas pelo Google (SEO incluído)", "Design mobile-first (perfeito no celular)", "Botão WhatsApp com mensagem pré-escrita", "Formulário conectado direto no seu WhatsApp", "Não é só um site: é seu sistema de vendas automático"],
-                    action: "Quero meu site pronto para receber reservas"
+                    title: "Seu Site Hoteleiro de Alta Conversão",
+                    desc: "Uma página profissional desenhada exclusivamente para hotéis: atrai hóspedes pelo Google, mostra suas instalações e recebe reservas diretas.",
+                    benefits: ["Especializado em Hotelaria (SEO incluído)", "Design de luxo mobile-first", "Botão WhatsApp com mensagem pré-escrita", "Formulário de reserva direto no seu WhatsApp", "Seu próprio motor de reservas sem comissões"],
+                    action: "Quero meu site hoteleiro de alta conversão"
                 },
                 optionB: {
                     name: "Opção B",
@@ -539,7 +542,7 @@ export const translations = {
                 contact: "Contato",
                 location: "Buenos Aires, Argentina",
                 presence: "Presença regional no Uruguai, Chile, Brasil e Paraguai",
-                rights: "Blue Automations SYSTEM // TODOS OS DIREITOS RESERVADOS",
+                rights: "Blue Automation SYSTEM // TODOS OS DIREITOS RESERVADOS",
                 designed: "DESIGNED FOR THE DEEP SPACE PERSPECTIVE",
                 description: "Especializados no desenvolvimento e implementação de agentes de IA para a automação do atendimento ao cliente e processos operacionais."
             }

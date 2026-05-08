@@ -11,7 +11,7 @@ const Pricing = () => {
         let message = '';
         if (language === 'es') {
             switch (planTitle) {
-                case t.pricing.plans.plan1.title: message = "¡Hola! 👋 Quiero contratar el Plan 1 (Agente Reservas) de Blue Automations."; break;
+                case t.pricing.plans.plan1.title: message = "¡Hola! 👋 Quiero contratar el Plan 1 (Agente Reservas) de Blue Automation."; break;
                 case t.pricing.plans.plan2.title: message = "¡Hola! 🚀 Quiero contratar el Plan Agente Pro para escalar mi negocio."; break;
                 case t.pricing.plans.optionA.title: message = "¡Hola! 🌐 Quiero contratar la Landing Web Optimizada (Opción A)."; break;
                 case t.pricing.plans.optionB.title: message = "¡Hola! 🔥 Quiero aprovechar el Combo Lanzamiento (Web + Agente)."; break;
@@ -37,7 +37,7 @@ const Pricing = () => {
             icon: icons[index],
             highlighted: key === 'plan2' || key === 'optionB',
             badge: key === 'plan2' ? t.pricing.recommended : (key === 'optionB' ? t.pricing.launchCombo : null),
-            priceLabel: key === 'plan1' ? '75' : (key === 'plan2' ? '150' : (key === 'optionA' ? '140' : '187')),
+            priceLabel: key === 'plan1' ? '75' : (key === 'plan2' ? '150' : (key === 'optionA' ? '190' : '187')),
             currency: key.startsWith('option') ? 'USD' : 'USD',
             footerText: isOperational ? t.pricing.realConsumption : t.pricing.oneTime,
             period: isOperational ? t.pricing.perMonth : '',

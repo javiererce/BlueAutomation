@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import Hero from './components/Hero'
 import Services from './components/Services'
 import Stats from './components/Stats'
@@ -10,7 +10,7 @@ import Pricing from './components/Pricing'
 import UseCases from './components/UseCases'
 import FAQ from './components/FAQ'
 import TechMarquee from './components/TechMarquee'
-import { MessageCircle, Menu, X, Globe, ChevronDown } from 'lucide-react'
+import { MessageCircle, Menu, X, Globe, ChevronDown, Instagram, Linkedin, Twitter } from 'lucide-react'
 import { useState } from 'react'
 import { useLanguage } from './LanguageContext'
 import Hoteles from './pages/Hoteles'
@@ -29,9 +29,9 @@ function App() {
 
   const openWhatsApp = () => {
     const messages = {
-      es: "Hola Blue Automations, me interesa conocer más sobre sus servicios de IA.",
-      en: "Hello Blue Automations, I'm interested in learning more about your AI services.",
-      pt: "Olá Blue Automations, estou interessado em saber mais sobre seus serviços de IA."
+      es: "Hola Blue Automation, me interesa conocer más sobre sus servicios de IA.",
+      en: "Hello Blue Automation, I'm interested in learning more about your AI services.",
+      pt: "Olá Blue Automation, estou interessado em saber mais sobre seus serviços de IA."
     };
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(messages[language])}`, '_blank');
   };
@@ -66,9 +66,9 @@ function App() {
       {/* ═══════════════════════════ NAVBAR ═══════════════════════════ */}
       <nav className="fixed top-20 md:top-24 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 border border-white/10 bg-dark/80 backdrop-blur-xl rounded-2xl shadow-2xl">
         <div className="container mx-auto px-6 h-24 flex items-center justify-between max-w-6xl">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollTo('hero')}>
+          <div className="flex items-center gap-3 cursor-pointer shrink-0" onClick={() => scrollTo('hero')}>
             <div className="w-12 h-12 rounded-xl bg-neon-gradient text-dark flex items-center justify-center font-bold text-2xl shadow-[0_0_20px_rgba(0,208,255,0.4)]">B</div>
-            <span className="font-bold text-2xl tracking-tight text-white uppercase italic">Blue Automations</span>
+            <span className="font-bold text-xl md:text-2xl tracking-tight text-white uppercase italic">Blue Automation</span>
           </div>
 
           {/* Desktop Nav */}
@@ -78,6 +78,7 @@ function App() {
             <button onClick={() => scrollTo('use-cases')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.cases}</button>
             <button onClick={() => scrollTo('pricing')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.plans}</button>
             <button onClick={() => scrollTo('faq')} className="text-gray-400 hover:text-neon-cyan transition-colors text-sm font-bold uppercase tracking-wider">{t.nav.faq}</button>
+            <Link to="/hoteles" className="text-neon-cyan hover:text-white transition-colors text-sm font-bold uppercase tracking-wider border border-neon-cyan/30 px-3 py-1 rounded-lg bg-neon-cyan/10">{t.nav.hotels}</Link>
 
             {/* Language Switcher */}
             <div className="relative">
@@ -145,6 +146,7 @@ function App() {
             <button onClick={() => scrollTo('use-cases')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.cases}</button>
             <button onClick={() => scrollTo('pricing')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.plans}</button>
             <button onClick={() => scrollTo('faq')} className="block w-full text-left text-gray-300 hover:text-neon-cyan py-2 uppercase text-sm tracking-widest font-bold">{t.nav.faq}</button>
+            <Link to="/hoteles" onClick={() => setMenuOpen(false)} className="block w-full text-left text-neon-cyan hover:text-white py-2 uppercase text-sm tracking-widest font-bold">{t.nav.hotels}</Link>
             <button
               onClick={openWhatsApp}
               className="w-full px-5 py-3 bg-neon-cyan text-dark rounded-full font-bold transition-all flex items-center justify-center gap-2"
@@ -208,11 +210,22 @@ function App() {
             <div className="md:col-span-2">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-neon-gradient text-dark flex items-center justify-center font-bold text-xl shadow-[0_0_15px_rgba(0,208,255,0.3)]">B</div>
-                <span className="font-bold text-xl uppercase italic">Blue Automations</span>
+                <span className="font-bold text-xl uppercase italic">Blue Automation</span>
               </div>
-              <p className="text-gray-500 text-sm leading-relaxed max-w-sm italic">
+              <p className="text-gray-500 text-sm leading-relaxed max-w-sm italic mb-6">
                 {t.contact.footer.description || t.nav.talk}
               </p>
+              <div className="flex gap-4">
+                <a href="#" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 transition-all">
+                  <Instagram className="w-5 h-5" />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 transition-all">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="#" className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-neon-cyan hover:border-neon-cyan/50 transition-all">
+                  <Twitter className="w-5 h-5" />
+                </a>
+              </div>
             </div>
 
             <div>
